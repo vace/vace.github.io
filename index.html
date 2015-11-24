@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="home">
+    <div class="list_article">
+    <ul class="nav nav-tabs">
+        <li id="rec" class="active">
+            <a href="#/a/"><i class="icon">&#xe611;</i> 全部</a>
+        </li>
+        <li id="hot">
+            <a href="#/ah/"><i class="icon">&#xe605;</i> 逛逛</a>
+        </li>
+        <li id="late">
+            <a href="#/articles/late"><i class="icon">&#xe61a;</i> 待读</a>
+        </li>
+        <li id="setting">
+            <a href="#/articles/setting"><i class="icon">&#xe607;</i> 设置</a>
+        </li>
+    </ul>
+    {% for post in site.posts %}
+        <div class="single_fake">
+
+            <div class="single">
+                <div class="article_title abs-title">
+                    <a href="{{ post.url | prepend: site.baseurl }}" class="article-list-title" title="{{ post.title }}">{{ post.title }}</a>
+                </div>
+                <div class="tip category-tips">
+                    <div class="meta-tip">
+                        {% for category in post.categories %}
+                            <a href="#"> <span class="badge">{{category}}</span></a>
+                        {% endfor %}
+
+                        {% for tag in post.tags %}
+                            <span class="label label-success"><i class="icon">&#xe610;</i> {{tag}}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="article_cut hidden-xs">
+                       {{ post.excerpt }}
+                </div>
+            </div>
+            <div class="tip">
+                <div class="meta-tip">
+                    <span class="cut cut28">
+                        <i class="author-head"></i>
+                        Vace
+                     </span>
+                     <span>
+                         <i class="icon">&#xe602;</i>
+                         {{ post.date | date: "%b %-d, %Y" }}
+                     </span>
+                     <a href="" class="read-later-btn pull-right"> 
+                       <i class="icon">&#xe624;</i> 稍后阅读
+                     </a>
+                     <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+</div>

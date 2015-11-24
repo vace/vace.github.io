@@ -1,0 +1,58 @@
+---
+layout: page
+title: 文章分类
+permalink: /category/
+---
+
+<div class="list_article">
+    <ul class="nav nav-tabs" role="tablist">
+        {% for categor in site.categories %}
+        <li role="presentation" {% if forloop.first %}class="active"{%endif%}>
+            <a href="#category-{{ categor[0] }}" aria-controls="#category-{{ categor[0] }}" role="tab" data-toggle="tab">{{ categor[0]|capitalize }} <span class="badge hidden-xs">{{ categor[1] | size }}</span></a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="tab-content">
+        {% for categorys in site.categories %}
+        <div role="tabpanel" class="tab-pane fade in {% if forloop.first %}active{%endif%}" id="category-{{ categorys[0] }}">
+            {% for post in categorys[1] %}
+            <div class="single_fake">
+                <div class="single">
+                    <div class="article_title abs-title">
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="article-list-title" title="{{ post.title }}">{{ post.title }}</a>
+                    </div>
+                    <div class="tip category-tips">
+                        <div class="meta-tip">
+                            {% for category in post.categories %}
+                            <a href="#"> <span class="badge">{{category}}</span></a>
+                            {% endfor %} 
+                            {% for tag in post.tags %}
+                            <span class="label label-success"><i class="icon">&#xe610;</i>  {{tag}}</span> {% endfor %}
+                        </div>
+                    </div>
+                    <div class="article_cut hidden-xs">
+                        {{ post.excerpt }}
+                    </div>
+                </div>
+                <div class="tip">
+                    <div class="meta-tip">
+                        <span class="cut cut28">
+                    <i class="author-head"></i>
+                    Vace
+                 </span>
+                <span>
+                     <i class="icon">&#xe602;</i>
+                     {{ post.date | date: "%b %-d, %Y" }}
+                 </span>
+                        <a href="" class="read-later-btn pull-right">
+                            <i class="icon">&#xe624;</i> 稍后阅读
+                        </a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>

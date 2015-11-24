@@ -1,0 +1,47 @@
+<header>
+    <!--导航菜单-->
+    <nav class="navbar header navbar-fixed-top">
+        <div class="container-fluid">
+            <span class="navbar-brand"><a href="/">
+				{% if site.model == 'pub' %}
+					<img id="headerimg" src="{{ site.pub.image }}/my-64.jpeg"></a>
+				{% else %}
+					<img id="headerimg" src="{{ site.dev.image }}/my-64.jpeg"></a>
+				{% endif %}
+			</span>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ site.baseurl }}/"><i class="icon">&#xe62b;</i> {{ site.home }}</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/category/"><i class="icon">&#xe619;</i> 分类</a></li>
+                    <li><a href="/archive/"><i class="icon">&#xe626;</i> 归档</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon">&#xe628;</i> 项目 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="icon">&#xe608;</i> PHP</a></li>
+                            <li><a href="#"><i class="icon">&#xe60a;</i> Python</a></li>
+                            <li><a href="#"><i class="icon">&#xe60c;</i> JavaScript</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#"><i class="icon">&#xe62a;</i> GAME</a></li>
+                            <li><a href="#"><i class="icon">&#xe601;</i> APP</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/about/"><i class="icon" style="font-size: 18px;">&#xe627;</i> 关于</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://github.com/vace"><i class="icon">&#xe60d;</i> Github</a></li>
+                    <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="icon">&#xe60e;</i> RSS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- 导航菜单结束-->
+</header>

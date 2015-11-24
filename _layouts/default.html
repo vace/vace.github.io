@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% include head.html %}
+<body>
+<!--引入导航-->
+{% include header.html %}
+<!--主体内容-->
+<div class="page-content">
+    <div class="container-fluid">
+    	<div class="row">
+                <div class="col-md-offset-2 col-md-8  main-content">
+                	<div  id="vace">
+						<a href="/"><img id="abouthead" src="{{ site.dev.image }}/my.jpeg"></a>
+						<p>守口如瓶，笑脸相迎。叩首问路，码梦为生。 --Vace</p>
+                	</div>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10  main-content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</div>
+<!--引入结尾-->
+{% include footer.html %}
+<!--引入脚本-->
+{% include script.html %}
+</body>
+</html>

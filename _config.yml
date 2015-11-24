@@ -1,0 +1,53 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Vace - 守口如瓶，笑脸相迎。叩首问路，码梦为生。
+home: Vace
+paginate: 8
+email: vace@qq.com
+production_url: http://5u55.com
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://searchp.cc" # the base hostname & protocol for your site
+permalink: /:year:month:day-:title.html
+
+# Build settings
+highlighter: pygments
+markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
+
+kramdown:
+  input:          GFM
+  auto_ids:       true
+  auto_id_prefix: 'id-'
+
+# 网站描述
+description:  不想做全栈的后端不是好前端。
+# 用户名，用来显示自己相关网络账号信息的。about.md之中。
+username: vace
+
+user:
+  email: ocdo@qq.com
+  github: http://github.com/vace
+  coding: https://coding.net/u/vace
+  twitter: http://twitter.com/vace
+  weixin: trycat
+  desc: 有轻度的强迫症，高度的代码洁癖，热爱编程。
+
+# 这里替换成线上的静态资源的链接。 主要最后的"/"。也要注意css使用的字体的链接。
+pub:
+  css: /assets/styles
+  js: /assets/scripts
+  image: /assets/images
+
+# 这里是本地的静态资源存放的路径
+dev:
+  css: /dev/styles
+  js: /dev/scripts
+  image: /dev/images
+
+# 选择模式 开发模式还是发布模式。上线之前务必改成pub！
+model: pub
