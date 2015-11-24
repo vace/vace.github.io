@@ -3,11 +3,7 @@
     <nav class="navbar header navbar-fixed-top">
         <div class="container-fluid">
             <span class="navbar-brand"><a href="/">
-				{% if site.model == 'pub' %}
-					<img id="headerimg" src="{{ site.pub.image }}/my-64.jpeg"></a>
-				{% else %}
-					<img id="headerimg" src="{{ site.dev.image }}/my-64.jpeg"></a>
-				{% endif %}
+                <img id="headerimg" src="{{ site.pub.image }}/my-64.jpeg"></a>
 			</span>
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
