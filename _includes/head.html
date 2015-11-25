@@ -6,7 +6,7 @@
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 	{% if site.model == 'pub' %}
-		<link rel="stylesheet" href="{{ site.pub.css }}/main.css">
+		<link rel="stylesheet" href="{{ site.pub.css }}/main.css?e7825d">
 	{% else %}
 		<link rel="stylesheet" href="{{ site.dev.css }}/main.css">
 	{% endif %}
