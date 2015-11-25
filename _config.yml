@@ -10,9 +10,9 @@ title: Vace - 守口如瓶，笑脸相迎。叩首问路，码梦为生。
 home: Vace
 paginate: 8
 email: vace@qq.com
-production_url: http://5u55.com
+production_url: http://5u55.cn
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://searchp.cc" # the base hostname & protocol for your site
+url: "http://5u55.cn" # the base hostname & protocol for your site
 permalink: /:year:month:day-:title.html
 
 # Build settings
@@ -39,9 +39,9 @@ user:
 
 # 这里替换成线上的静态资源的链接。 主要最后的"/"。也要注意css使用的字体的链接。
 pub:
-  css: /assets/styles
-  js: /assets/scripts
-  image: /assets/images
+  css: //ocdo.qiniudn.com/blog/styles
+  js: //ocdo.qiniudn.com/blog/scripts
+  image: //ocdo.qiniudn.com/blog/images
 
 # 这里是本地的静态资源存放的路径
 dev:

@@ -1,0 +1,5 @@
+{
+    "src":          "/Users/vace/MyGithub/myblog/assets",
+    "dest":         "qiniu:access_key=dKAVpoMvnZ4l12y1uLTL5BUID1BkF6oWHbxeZAqH&secret_key=Hgk-8zHJLJINHDiUIGSJyzgZmS24uce0PR-tKLCU&bucket=ocdo&key_prefix=blog&threshold=10485760",
+    "debug_level":  1
+}

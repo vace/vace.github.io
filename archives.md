@@ -36,7 +36,7 @@ permalink: /archive/
                 <i class="author-head"></i>
                 Vace
              </span>
-                    <span>
+            <span>
                  
                  <i class="icon">&#xe602;</i>
                  {{ post.date | date: "%b %-d, %Y" }}

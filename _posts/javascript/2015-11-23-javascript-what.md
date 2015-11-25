@@ -5,6 +5,18 @@ categories: [javascript,linux]
 tags: [javascript,nodejs]
 ---
 
+
+```php
+abstract class Animal{
+    public static function getInstance(){}
+}
+
+class Dog extends Animal{}
+
+$dog = Dog::getInstance();
+```
+
+
 # 2015-11-23-javascript-what.md
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

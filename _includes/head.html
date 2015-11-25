@@ -12,5 +12,13 @@
 	{% endif %}
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 	<link rel="icon shortcut" href="/favicon.ico" type="image/x-icon">
+	<script type="text/javascript">
+		var APP_STATIC = {
+			{% if site.model == 'pub' %}
+				css:"{{site.pub.css}}",js:"{{site.pub.js}}",image:"{{site.pub.image}}"
+			{% else %}
+				css:"{{site.dev.css}}",js:"{{site.dev.js}}",image:"{{site.dev.image}}"
+			{% endif %}
+		}
+	</script>
 </head>
-
