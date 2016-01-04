@@ -53,5 +53,5 @@ dev:
 image: /dev/images
 
 # 选择模式 开发模式还是发布模式。上线之前务必改成pub！
-model: dev
-md5: ed2j8u
+model: pub
+md5: hsduw6
