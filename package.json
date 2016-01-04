@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build":"r.js -o ./mark.js",
-    "push" : "git add --all && git commit -m addnewblog",
+    "release":"r.js -o ./mark.js && git add --all && git commit -m autocommit && git push && qrsync assets/upload.json",
+
+    "push" : "git add --all && git commit -m addnewblog && git push",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

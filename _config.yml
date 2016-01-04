@@ -10,9 +10,9 @@ title: Vace - 守口如瓶，笑脸相迎。叩首问路，码梦为生。
 home: Vace
 paginate: 8
 email: vace@qq.com
-production_url: http://5u55.cn
+production_url: http://www.5u55.cn
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://5u55.cn" # the base hostname & protocol for your site
+url: "http://www.5u55.cn" # the base hostname & protocol for your site
 permalink: /:year:month:day-:title.html
 
 # Build settings
@@ -48,6 +48,10 @@ dev:
   css: /dev/styles
   js: /dev/scripts
   image: /dev/images
+# md快速引入路径
+# image: //ocdo.qiniudn.com/blog/images
+image: /dev/images
 
 # 选择模式 开发模式还是发布模式。上线之前务必改成pub！
-model: pub
+model: dev
+md5: ed2j8u

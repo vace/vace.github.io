@@ -281,6 +281,7 @@ styles/base.css
 styles/bootstrap-theme.css
 styles/animation.css
 styles/user.css
+styles/project.css
 styles/highlight/default.css
 styles/main.css
 
@@ -348,6 +349,10 @@ styles/markdown/solarizedcssdark.css
 ----------------
 styles/markdown/solarizedcssdark.css
 
+styles/project.css
+----------------
+styles/project.css
+
 styles/user.css
 ----------------
 styles/user.css
@@ -369,4 +374,5 @@ scripts/bootstrap/collapse.js
 scripts/bootstrap/tab.js
 scripts/mods/special-dom.js
 scripts/mods/wechat.js
+scripts/mods/scroll.js
 scripts/main.js

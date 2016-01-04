@@ -1,8 +1,8 @@
 <!--所有脚本文件的引入-->
 {% if site.model == 'pub' %}
-	<script src="{{site.pub.js}}/libs/require.js" data-main="{{site.pub.js}}/main.js"></script>
+	<script src="{{site.pub.js}}/libs/require.js" data-main="{{site.pub.js}}/main.js?{{ site.md5 }}"></script>
 {% else %}
-	<script src="{{site.dev.js}}/libs/require.js" data-main="{{site.dev.js}}/main.js"></script>
+	<script src="{{site.dev.js}}/libs/require.js" data-main="{{site.dev.js}}/main.js?{{ site.md5 }}"></script>
 {% endif %}
 
 {% include extends/tajs.html %}

@@ -6,18 +6,18 @@
 	<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 	{% if site.model == 'pub' %}
-		<link rel="stylesheet" href="{{ site.pub.css }}/main.css?e7825d">
+		<link rel="stylesheet" href="{{ site.pub.css }}/main.css?{{ site.md5 }}">
 	{% else %}
-		<link rel="stylesheet" href="{{ site.dev.css }}/main.css">
+		<link rel="stylesheet" href="{{ site.dev.css }}/main.css?{{ site.md5 }}">
 	{% endif %}
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 	<link rel="icon shortcut" href="/favicon.ico" type="image/x-icon">
 	<script type="text/javascript">
 		var APP_STATIC = {
 			{% if site.model == 'pub' %}
-				css:"{{site.pub.css}}",js:"{{site.pub.js}}",image:"{{site.pub.image}}"
+				css:"{{site.pub.css}}",js:"{{site.pub.js}}",image:"{{site.pub.image}}",md5:"{{ site.md5 }}"
 			{% else %}
-				css:"{{site.dev.css}}",js:"{{site.dev.js}}",image:"{{site.dev.image}}"
+				css:"{{site.dev.css}}",js:"{{site.dev.js}}",image:"{{site.dev.image}}",md5:"{{ site.md5 }}"
 			{% endif %}
 		}
 	</script>
