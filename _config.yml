@@ -49,8 +49,8 @@ dev:
   js: /dev/scripts
   image: /dev/images
 # md快速引入路径
-# image: //ocdo.qiniudn.com/blog/images
-image: /dev/images
+image: //ocdo.qiniudn.com/blog/images
+# image: /dev/images
 
 # 选择模式 开发模式还是发布模式。上线之前务必改成pub！
 model: pub
