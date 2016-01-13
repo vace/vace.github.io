@@ -375,4 +375,5 @@ scripts/bootstrap/tab.js
 scripts/mods/special-dom.js
 scripts/mods/wechat.js
 scripts/mods/scroll.js
+scripts/mods/game.js
 scripts/main.js
