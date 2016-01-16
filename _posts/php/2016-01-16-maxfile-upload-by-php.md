@@ -31,7 +31,7 @@ php实现文件切割上传需要前端的配合,相关前端代码见[javascrip
 
 5.合并完成后删除上传的临时块文件
 
-全部代码可以从这里查看并且下载: []
+全部代码可以从这里查看并且下载: [github](https://github.com/vace/html5upload)
 
 ```php
 /**
