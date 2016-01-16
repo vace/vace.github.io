@@ -157,6 +157,9 @@ DataTransfer对象用来保存拖放操作时被拖动的数据。它可能包�
 
 TODO....
 
+4.大文件切断上传(支持断点续传,这里只展示前端代码,后端代码实现为php,详情见)
+
+<iframe width="100%" height="400" src="//jsfiddle.net/vace/7xnymmx8/2/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
 
