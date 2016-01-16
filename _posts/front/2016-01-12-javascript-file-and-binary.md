@@ -157,7 +157,9 @@ DataTransfer对象用来保存拖放操作时被拖动的数据。它可能包�
 
 TODO....
 
-4.大文件切断上传(支持断点续传,这里只展示前端代码,后端代码实现为php,详情见[github](https://github.com/vace/html5upload))
+4.大文件切断上传(支持断点续传,这里只展示前端代码,后端代码实现为php[php实现大文件切割上传,并且支持断点续传
+
+](http://www.5u55.cn/20160116-maxfile-upload-by-php.html),全部代码见[github html5upload](https://github.com/vace/html5upload))
 
 <iframe width="100%" height="400" src="//jsfiddle.net/vace/7xnymmx8/2/embedded/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 

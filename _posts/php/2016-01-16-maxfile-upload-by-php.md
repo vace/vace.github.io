@@ -5,7 +5,7 @@ categories: [后端]
 tags: [php,html5,Blob]
 ---
 
-php实现文件切割上传需要前端的配合,相关前端代码见[javascript中二进制数据和文件的操作](http://www.5u55.cn/20160112-javascript-file-and-binary.html)
+php实现文件切割上传需要前端的配合,相关前端代码见[javascript中二进制数据和文件的操作](http://www.5u55.cn/20160112-javascript-file-and-binary.html),全部代码可以从这里查看并且下载: [github](https://github.com/vace/html5upload)
 
 后端实现比较简单,需要对前端发送的每一段数据进行保存
 
@@ -31,7 +31,6 @@ php实现文件切割上传需要前端的配合,相关前端代码见[javascrip
 
 5.合并完成后删除上传的临时块文件
 
-全部代码可以从这里查看并且下载: [github](https://github.com/vace/html5upload)
 
 ```php
 /**
