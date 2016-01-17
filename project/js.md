@@ -36,7 +36,7 @@ permalink: /project/js/
 			<div class="box-project">
 				<div class="cover">
 					<a href="" class="link">
-						<img src="/dev/images/empty.jpg" alt="">
+						<img src="{{site.image}}/empty.jpg" alt="">
 					</a>
 					<p>
 						<span>暂无</span>
@@ -59,7 +59,7 @@ permalink: /project/js/
 			<div class="box-project">
 				<div class="cover">
 					<a href="" class="link">
-						<img src="/dev/images/empty.jpg" alt="">
+						<img src="{{site.image}}/empty.jpg" alt="">
 					</a>
 					<p>
 						<span>空的...</span>
