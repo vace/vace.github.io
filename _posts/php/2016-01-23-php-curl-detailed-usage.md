@@ -294,35 +294,25 @@ curl_download('http://httpbin.org/image/png','./down.png');
 
 这样的cURL使用比较麻烦,我们可以自己实现需要的curl操作类(这里只是简单演示一下,推荐一个比较齐全的CURL操作库[A Chainable, REST Friendly, PHP HTTP Client. A sane alternative to cURL](https://github.com/nategood/httpful))
 
+#### 使用方法
+```php
+//1.构造一个简单的 get 请求,抓取 http://www.example.com/ 的页面内容
+echo Curl::get('http://www.example.com/')->send();
+//2.构造一个简单的 post 请求,提交username和age到指定页面
+print_r( Curl::post('http://httpbin.org/post')->setData(['username'=>'vace','age'=>23])->send() );
+//3.HTTP 认证连接
+echo Curl::get('http://httpbin.org/basic-auth/vace/passwd')->setAuth('vace','passwd')->send();
+//4.使用cURL获取cookies并保存到本地
+echo Curl::get('http://httpbin.org/cookies/set?cookie1=vace')->useCookies('./cookies.log')->send();
+//5.下载一张图片到本地
+Curl::get('http://httpbin.org/image/png')->download('./test.png')->send();
+
+```
+
 
 ```php
 
-//1.构造一个简单的 get 请求,抓取 http://www.example.com/ 的页面内容
-// echo Curl::get('http://www.example.com/')->send();
-//2.构造一个简单的 post 请求,提交username和age到指定页面
-// print_r( Curl::post('http://httpbin.org/post')->setData(['username'=>'vace','age'=>23])->send() );
-//3.HTTP 认证连接
-// echo Curl::get('http://httpbin.org/basic-auth/vace/passwd')->setAuth('vace','passwd')->send();
-//4.使用cURL获取cookies并保存到本地
-// echo Curl::get('http://httpbin.org/cookies/set?cookie1=vace')->useCookies('./cookies.log')->send();
-//5.下载一张图片到本地
-// Curl::get('http://httpbin.org/image/png')->download('./test.png')->send();
-
 class Curl{
-	/**
-	 * [$allMethod 全部访问方法]
-	 * @var [array]
-	 */
-	public static $allMethod = [
-		'get'     => false,
-		'head'    => false,
-		'post'    => true,
-		'put'     => true,
-		'patch'   => true,
-		'delete'  => false,
-		'options' => false
-	];
-
 	/**
 	 * [__callStatic 调用方法请求数据]
 	 * @param  [type] $method [allMethod key]
@@ -336,7 +326,19 @@ class Curl{
 		}
 		return new self($method,$url[0]);
 	}
-
+	/**
+	 * [$allMethod 全部访问方法]
+	 * @var [array]
+	 */
+	public static $allMethod = [
+		'get'     => false,
+		'head'    => false,
+		'post'    => true,
+		'put'     => true,
+		'patch'   => true,
+		'delete'  => false,
+		'options' => false
+	];
 	/**
 	 * [$url 请求url]
 	 * @var [string]
