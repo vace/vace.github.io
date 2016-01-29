@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!--author:Vace_Vlm(ocdo@qq.com),create:2016年1月26日 下午5:31-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <base href="http://cdn.5u55.cn/fs2016/" target="_blank, _self, _parent, _top">
+    <meta name="apple-mobile-web-app-title" content="vace" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,initial-scale=0.5,maximum-scale=0.5,user-scalable=no">
+    <title>风尚 · 2016 · 最后的大奖</title>
+    <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+
+<body id="app" :class="thanksover">
+    <section id="welcome" class="welcome" :class="'row-'+row">
+        <div class="user" :class="user.leave_eff" v-for="user in users" track-by="$index">
+            <div class="rollover" :class="{coming:user.status===1}">
+                <div class="cube">
+                    <img :src="user.userinfo.headimgurl|smallimg" class="back">
+                    <img src="assets/images/bg2.png" class="front">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section v-el:canvasgame id="canvasgame" class="view-stage">
+        <canvas id="canvas"></canvas>
+    </section>
+    <section id="luckpage" v-show="startLucky">
+        <div class="container">
+            <div v-el:luckyele class="cube">
+                <div class="side" v-for="user in luckyusers" :class="'side'+($index+1)">
+                    <img :src="user.userinfo.headimgurl|smallimg" alt="">
+                    <p>{{user.userinfo.nickname}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="assets/libs/vue/vue.min.js"></script>
+    <script src="assets/libs/promise/promise.js"></script>
+    <script src="assets/script/user.js"></script>
+    <script src="assets/script/filter.js"></script>
+    <script src="assets/canvas/objlibray.js"></script>
+    <script src="assets/canvas/draw.js"></script>
+    <script src="assets/script/app.js"></script>
+    <script>
+    /**
+     * 抽奖规则为
+     */
+    initApp().then(getAllUserByAjaxLuck)
+        .then(GAME.start)
+        // // //画出波形图
+        .then(GAME.drawlayerInit)
+        // //开始画 requestAnimatFrame
+        .then(GAME.startdraw)
+        .then(APP.allUserIsComing)
+        .then(APP.timeout(1500))
+        .then(APP.swiperToNextScreen)
+        .then(APP.timeout(1500))
+        .then(GAME.startCenterDraw)
+        .then(APP.drawTextFont('FS*2016'))
+        .then(APP.clearDrawMap)
+        .then(APP.timeout(1000))
+        .then(APP.drawTextFont('START!!'))
+        .then(APP.allUserBackUp(false))
+        .then(APP.timeout(1000))
+        .then(APP.clearDrawMap)
+        .then(APP.timeout(1000))
+        .then(APP.drawChineseText('五'))
+        .then(APP.timeout(1000))
+        .then(APP.clearDrawMap)
+        .then(APP.drawChineseText('四'))
+        .then(APP.timeout(1000))
+        .then(APP.clearDrawMap)
+        .then(APP.drawChineseText('三'))
+        .then(APP.timeout(1000))
+        .then(APP.clearDrawMap)
+        .then(APP.drawChineseText('二'))
+        .then(APP.timeout(1000))
+        .then(APP.clearDrawMap)
+        .then(APP.drawChineseText('一'))
+        .then(APP.getNumberOfUsers(6, true))
+        .then(APP.showLuckRubikCube);
+    </script>
+</body>
+
+</html>
