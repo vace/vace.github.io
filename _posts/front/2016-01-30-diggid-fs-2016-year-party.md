@@ -8,6 +8,14 @@ tags: [javascript,vue,canvas,promise]
 由于现场屏幕为20m*3.5m,所以h5中的设计尺寸为`@screenWidth  : 3520px;@screenHeight : 616px`,请使用谷歌chrome浏览器打开演示,超出屏幕尺寸使用 `ctrl`+`-`号键缩小网页,可以看到全屏,现在的数据为假数据,现场开场数据为企业微信账号粉丝,抽奖数据为与企业账号互动的粉丝.
 
 
+### 视频
+
+<div class="col-xs-12">
+	<video autobuffer controls style="width: 100%;">
+		<source src="{{site.cdn}}/video/2016-diggid-test.mp4">
+	</video>
+</div>
+
 
 
 <div class="col-md-6 col-xs-12">
