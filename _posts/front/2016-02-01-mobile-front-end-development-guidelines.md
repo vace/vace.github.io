@@ -47,9 +47,12 @@ tags: [javascript,css]
 * 待续...
 
 <a name="compatibility"></a>
+
+
 ## 兼容性
 
 <a name="active"></a>
+
 ### CSS伪类:active
 
 如果你想使用元素的伪类来实现 `按下激活` 状态，那么你需要知道以下问题：
@@ -61,6 +64,7 @@ tags: [javascript,css]
 > 为了规避上述所有的问题，如果需要 `按下激活` 状态，推荐使用 `js` 新增一个 `className`
 
 <a name="input-shadow"></a>
+
 ### 清除输入框内阴影
 
 iOS上的几乎任何浏览器输入框（input, textarea）默认有内部阴影，但无法使用 `box-shadow` 来清除，如果不需要阴影，可以这样关闭：
@@ -81,6 +85,7 @@ textarea {
 ```
 
 <a name="s4-radius"></a>
+
 ### Samsung S4圆角Bug
 
 `Samsung S4` 手机在 `Android Browser4.4.2` 上（其他版本未测），如果你使用了 `border-radius`，并且使用了 `-webkit-transform` 属性，当使用了 `translatez` 或者 `translate3d` 值，圆角会出现问题：
@@ -107,6 +112,7 @@ textarea {
 
 
 <a name="background-overflow"></a>
+
 ### 边框圆角致背景溢出
 
 在红米和OPPO等手机某些版本的 `Android Webview` 中，如果一个元素定义了 `border` + `border-radius`，这时如果该元素有背景，那么背景将会溢出圆角之外。
@@ -119,6 +125,7 @@ textarea {
 
 
 <a name="border-radius-percentage"></a>
+
 ### 一个失败的圆（圆角）
 
 在移动平台上开发时，用CSS画一个圆很简单，只需要一句代码：
@@ -141,6 +148,7 @@ textarea {
 
 
 <a name="pseudo-element-animation"></a>
+
 ### 不要使用伪元素动画
 
 有的时候你可能会为了减少页面上的DOM数，而使用伪元素。但如果你想给伪元素增加 `animation` 或者 `transition` 动画，这时候会碰上支持性问题。
@@ -152,6 +160,7 @@ textarea {
     * 魅族 - Flyme OS 4.1.1.1C及以下（比这高的版本尚未测试过）- **咱国产能别这么坑么（安卓版本为4.4.4的魅族MX4 pro）**
 
 <a name="checked-sibling-bug"></a>
+
 ### :checked与兄弟选择符一起使用的bug
 
 在 `Android Browser4.2.*及以下`（可能版本稍有出入）（包括坑爹的Flyme），如果你有这样一段代码：
@@ -184,6 +193,7 @@ input:checked + .test {
 ```
 
 <a name="flex"></a>
+
 ### 为什么flex布局不生效
 
 * 使用[块级元素](http://blog.doyoe.com/2015/03/09/css/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B%E4%B8%AD%E7%9A%84%E5%90%84%E7%A7%8D%E6%A1%86/#block-level-element)作为 `flex items（flex子项）`；
@@ -201,6 +211,7 @@ input:checked + .test {
 > `Android Browser4.3及以下`，`iOS Safari6.1及以下` 的 `flex子项` 如果没有显式的定义 `height` 为非 `auto` 的值，那么子项分配父元素剩余空间时将会不符合标准预期；
 
 <a name="12px"></a>
+
 ### 为什么小于12px字号不生效
 
 如果你是从`pc`开发转到移动平台的，或者应该记得在`pc`端，`Chrome`及后来加入Webkit阵营的`Opera`都不支持页面字号小于`12px`，当然你可以通过更改浏览器设置来改变这一情况，然后这并没有什么卵用，不是么？
@@ -212,9 +223,11 @@ input:checked + .test {
 > 题外话：假设你的项目使用了`rem`，那么不要使用`10`作为换算因子，原因也如上
 
 <a name="experience"></a>
+
 ## 经验
 
 <a name="touch-callout"></a>
+
 ### 禁止保存或拷贝图像
 
 通常当你在手机或者pad上长按图像 `img` ，会弹出选项 `存储图像` 或者 `拷贝图像`，如果你不想让用户这么操作，那么你可以通过以下方法来禁止：
@@ -228,6 +241,7 @@ img {
 > 需要注意的是，该方法只在 `iOS` 上有效。
 
 <a name="tap-highlight-color"></a>
+
 ### 取消touch高亮
 
 在移动设备上，所有设置了伪类 `:active` 的元素，默认都会在激活状态时，显示高亮框，如果不想要这个高亮，那么你可以通过以下方法来禁止：
@@ -239,6 +253,7 @@ img {
 ```
 
 <a name="user-select"></a>
+
 ### 禁止选中内容
 
 如果你不想用户可以选中页面中的内容，那么你可以禁掉：
@@ -250,6 +265,7 @@ html {
 ```
 
 <a name="overflow-scrolling"></a>
+
 ### 快速回弹滚动
 
 1. 早期的时候，移动端的浏览器都不支持非body元素的滚动条，所以一般都借助 iScroll;
@@ -267,12 +283,14 @@ html {
 ```
 
 <a name="shortcut-title"></a>
+
 ### 设置添加到主屏幕的Web App标题
 
 `iOS Safari` 允许用户将一个网页添加到主屏幕然后像 `App` 一样来操作它。我们知道每个 `App` 下方都会有一个名字，`iOS Safari` 提供了一个私有的 `meta` 来定义这个名字，代码如下：
 
 ```
 <meta name="apple-mobile-web-app-title" content="Web App名称" />
+
 ```
 
 `Android Chrome31.0`，`Android Browser5.0` 也开始支持添加到主屏幕了，但并没有提供相应的定义标题的方式，所以如果你想统一 `iOS` 和 `Android` 平台定义 Web app 名称的方式，可以使用 `title` 标签来定义，代码如下：
@@ -284,6 +302,7 @@ html {
 但如果你想要网页标题和App名字不一样的话，那就只有iOS才行。
 
 <a name="shortcut-icon"></a>
+
 ### 设置添加到主屏幕的Web App图标
 
 当我们将一个网页添加到主屏幕时，除了会需要设置标题之外，肯定还需要能够自定义这个App的图标，代码如下：
@@ -320,29 +339,34 @@ html {
 该方案在 `iOS` 和 `Android5.0+` 上都通用。
 
 <a name="hide-bar"></a>
+
 ### 添加到主屏幕时隐藏地址栏和状态栏（即全屏）
 
 当我们将一个网页添加到主屏幕时，会更希望它能有像 `App` 一样的表现，没有地址栏和状态栏全屏显示，代码如下：
 
 ```
 <meta name="apple-mobile-web-app-capable" content="yes" />
+
 ```
 
 该方案在 `iOS` 和 `Android5.0+` 上都通用。
 
 <a name="status-bar-style"></a>
+
 ### 添加到主屏幕时设置系统顶栏颜色
 
 当我们将一个网页添加到主屏幕时，还可以对 `系统显示手机信号、时间、电池的顶部状态栏` 颜色进行设置，前提是开启了：
 
 ```
 <meta name="apple-mobile-web-app-capable" content="yes" />
+
 ```
 
 有了这个前提，你可以通过下面的方式来进行定义：
 
 ```
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
 ```
 
 content只有3个固定值可选：default | black | black-translucent
@@ -354,6 +378,7 @@ content只有3个固定值可选：default | black | black-translucent
 该设置只在 `iOS` 上有效。
 
 <a name="tel"></a>
+
 ### 电话号码识别
 
 在 `iOS Safari` （其他浏览器和Android均不会）上会对那些看起来像是电话号码的数字处理为电话链接，比如：
@@ -369,6 +394,7 @@ content只有3个固定值可选：default | black | black-translucent
 
 ```
 <meta name="format-detection" content="telephone=no" />
+
 ```
 
 2. 开启拨打电话功能：
@@ -384,6 +410,7 @@ content只有3个固定值可选：default | black | black-translucent
 ```
 
 <a name="email"></a>
+
 ### 邮箱地址识别
 
 在 `Android` （iOS不会）上，浏览器会自动识别看起来像邮箱地址的字符串，不论有你没有加上邮箱链接，当你在这个字符串上长按，会弹出发邮件的提示。
@@ -392,6 +419,7 @@ content只有3个固定值可选：default | black | black-translucent
 
 ```
 <meta name="format-detection" content="email=no" />
+
 ```
 
 2. 开启邮件发送：
@@ -404,9 +432,11 @@ content只有3个固定值可选：default | black | black-translucent
 
 ```
 <meta name="format-detection" content="telephone=no,email=no" />
+
 ```
 
 <a name="autocapitalize"></a>
+
 ### 关闭iOS键盘首字母自动大写
 
 在iOS中，默认情况下键盘是开启首字母大写的功能的，如果业务不想出现首字母大写，可以这样：
@@ -416,6 +446,7 @@ content只有3个固定值可选：default | black | black-translucent
 ```
 
 <a name="autocorrect"></a>
+
 ### 关闭iOS输入自动修正
 
 在iOS中，默认输入法会开启自动修正输入内容的功能，如果不需要的话，可以这样：
@@ -425,6 +456,7 @@ content只有3个固定值可选：default | black | black-translucent
 ```
 
 <a name="text-size-adjust"></a>
+
 ### 禁止文本缩放
 
 当移动设备横竖屏切换时，文本的大小会重新计算，进行相应的缩放，当我们不需要这种情况时，可以选择禁止：
