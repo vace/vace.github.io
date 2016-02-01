@@ -10,6 +10,11 @@ tags: [javascript,vue,canvas,promise]
 
 ### 视频
 
+
+#### [开场环节体验](http://www.5u55.cn/a/fs2016/start.html)
+#### [普通抽奖环节体验](http://www.5u55.cn/a/fs2016/lottery.html)
+#### [最终奖品环节体验](http://www.5u55.cn/a/fs2016/awards.html)
+
 <div class="col-xs-12">
 	<video autobuffer controls style="width: 100%;">
 		<source src="{{site.cdn}}/video/2016-diggid-test.mp4">
