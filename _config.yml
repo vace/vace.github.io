@@ -13,11 +13,11 @@ email: vace@qq.com
 production_url: http://www.5u55.cn
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.5u55.cn" # the base hostname & protocol for your site
-cdn: "//cdn.5u55.cn" # 资源cdn地址
+cdn: "http://cdn.5u55.cn" # 资源cdn地址
 permalink: /:year:month:day-:title.html
 
 # Build settings
-highlighter: pygments
+# highlighter: pygments
 markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
 
 kramdown:
@@ -40,9 +40,9 @@ user:
 
 # 这里替换成线上的静态资源的链接。 主要最后的"/"。也要注意css使用的字体的链接。
 pub:
-  css: //cdn.5u55.cn/blog/styles
-  js: //cdn.5u55.cn/blog/scripts
-  image: //cdn.5u55.cn/blog/images
+  css: http://cdn.5u55.cn/blog/styles
+  js: http://cdn.5u55.cn/blog/scripts
+  image: http://cdn.5u55.cn/blog/images
 
 # 这里是本地的静态资源存放的路径
 dev:
@@ -50,7 +50,7 @@ dev:
   js: /dev/scripts
   image: /dev/images
 # md快速引入路径
-image: //cdn.5u55.cn/blog/images
+image: http://cdn.5u55.cn/blog/images
 # image: /dev/images
 
 # 选择模式 开发模式还是发布模式。上线之前务必改成pub！
