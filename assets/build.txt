@@ -11,6 +11,10 @@ styles/bootstrap-theme.css
 ----------------
 styles/bootstrap-theme.css
 
+styles/demo.css
+----------------
+styles/demo.css
+
 styles/highlight/agate.css
 ----------------
 styles/highlight/agate.css
@@ -282,6 +286,7 @@ styles/bootstrap-theme.css
 styles/animation.css
 styles/user.css
 styles/project.css
+styles/demo.css
 styles/highlight/default.css
 styles/main.css
 

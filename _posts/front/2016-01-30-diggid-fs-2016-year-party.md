@@ -11,9 +11,9 @@ tags: [javascript,vue,canvas,promise]
 ### 视频
 
 
-#### [开场环节体验](http://www.5u55.cn/a/fs2016/start.html)
-#### [普通抽奖环节体验](http://www.5u55.cn/a/fs2016/lottery.html)
-#### [最终奖品环节体验](http://www.5u55.cn/a/fs2016/awards.html)
+#### [开场环节体验](/a/fs2016/start.html)
+#### [普通抽奖环节体验](/a/fs2016/lottery.html)
+#### [最终奖品环节体验](/a/fs2016/awards.html)
 
 <div class="col-xs-12">
 	<video autobuffer controls style="width: 100%;">
@@ -26,7 +26,7 @@ tags: [javascript,vue,canvas,promise]
 <div class="col-md-6 col-xs-12">
 <div class="box-project" style="margin-top: 100px;">
 	<div class="cover">
-		<a href="http://www.5u55.cn/a/fs2016/start.html" class="link">
+		<a href="/a/fs2016/start.html" class="link">
 			<img src="{{site.image}}/project/js-project-main3.jpeg" alt="">
 		</a>
 		<p>
@@ -36,15 +36,15 @@ tags: [javascript,vue,canvas,promise]
 	</div>
 	<p class="description">
 		2016年我司年会h5
-		<a href="http://www.5u55.cn/a/fs2016/start.html">开场演示</a>,
-		<a href="http://www.5u55.cn/a/fs2016/lottery.html">抽奖演示</a>,
-		<a href="http://www.5u55.cn/a/fs2016/awards.html">大奖演示</a>
+		<a href="/a/fs2016/start.html">开场演示</a>,
+		<a href="/a/fs2016/lottery.html">抽奖演示</a>,
+		<a href="/a/fs2016/awards.html">大奖演示</a>
 	</p>
 	<p class="footer">
 		2016年会H5程序
 		<span class="todo">
 			<a href="https://github.com/vace/diggid-2016" title="查看源码" class="github"><i class="icon">&#xe60d;</i></a>
-			<a href="http://www.5u55.cn/a/fs2016/start.html" title="查看演示" class="github"><i class="icon">&#xe628;</i></a>
+			<a href="/a/fs2016/start.html" title="查看演示" class="github"><i class="icon">&#xe628;</i></a>
 		</span>
 	</p>
 </div>

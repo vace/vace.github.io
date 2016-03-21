@@ -1,14 +1,28 @@
 ---
 layout: default
 ---
-<div class="post markdown">
-	<!--页面标题-->
-	<header>
-		<h1 class="post-title">{{ page.title }}</h1>
-	</header>
-
-	<!--页面内容-->
-	<article class="post-content">
-		{{ content }}
-	</article>
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row user-motto">
+            <canvas id="main-canvas">浏览器太低级了</canvas>
+            <div id="vace">
+                <a href="/"><img id="abouthead" src="{{ site.assets.image }}/my.jpeg"></a>
+                <p>守口如瓶，笑脸相迎。叩首问路，码梦为生。 --Vace</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10  main-content">
+                <div class="post markdown">
+                    <!--页面标题-->
+                    <header>
+                        <h1 class="post-title">{{ page.title }}</h1>
+                    </header>
+                    <!--页面内容-->
+                    <article class="post-content">
+                        {{ content }}
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

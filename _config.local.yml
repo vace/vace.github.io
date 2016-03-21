@@ -8,8 +8,8 @@
 # Site settings
 title: Vace - 守口如瓶，笑脸相迎。叩首问路，码梦为生。
 home: Vace
-paginate: 8
-email: vace@qq.com
+paginate: 20
+email: ocdo@qq.com
 production_url: https://vace.me
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://vace.me" # the base hostname & protocol for your site
@@ -50,4 +50,4 @@ image: https://o4e068rzf.qnssl.com/blog/images
 
 # 选择模式 开发模式还是发布模式。上线之前务必改成pub！
 model: pub
-md5: wyxz2s
+md5: UQCD711382
