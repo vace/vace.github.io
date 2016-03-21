@@ -6,7 +6,23 @@
     <!--引入导航-->
     {% include header.html %}
     <!--主体内容-->
-    {{ content }}
+    <div class="page-content">
+        <div class="container-fluid">
+            <div class="row user-motto">
+                <canvas id="main-canvas">浏览器太低级了</canvas>
+                <div id="vace">
+                    <a href="/"><img id="abouthead" src="{{ site.assets.image }}/my.jpeg"></a>
+                    <p>守口如瓶，笑脸相迎。叩首问路，码梦为生。 --Vace</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10  main-content">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </div>
     <!--引入结尾-->
     {% include footer.html %}
     <!--引入脚本-->
