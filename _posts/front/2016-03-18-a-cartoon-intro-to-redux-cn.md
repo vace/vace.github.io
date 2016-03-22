@@ -226,6 +226,7 @@ Provider 本质上创建了一个用于更新视图组件的网络。那些智�
 
 这就是我所理解的 Redux，希望对你有所帮助。
 
+
 ## 更多资源
 
  - [Redux 官方文档](http://rackt.org/redux/index.html)
