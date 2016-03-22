@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="{{ site.assets.css }}/main.css?{{ site.md5 }}">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 	<link rel="icon shortcut" href="/favicon.ico" type="image/x-icon">
+	<link rel="dns-prefetch" href="{{ site.cdn }}">
 	<script type="text/javascript">
 		var APP_STATIC = {
 			css:"{{site.assets.css}}",js:"{{site.assets.js}}",image:"{{site.assets.image}}",md5:"{{ site.md5 }}"
