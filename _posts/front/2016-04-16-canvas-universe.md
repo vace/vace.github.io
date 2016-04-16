@@ -69,14 +69,23 @@ tags: [Javascript,Canvas]
 
 
 ├── [earth-and-sun.js](https://github.com/vace/canvas-universe/blob/master/scripts/earth-and-sun.js#L1) 地球太阳月亮组成的系统
+
 ├── [image-render.js](https://github.com/vace/canvas-universe/blob/master/scripts/image-render.js#L1) 普通图片渲染到canvas
+
 ├── [main-render.js](https://github.com/vace/canvas-universe/blob/master/scripts/main-render.js#L1) 主场景,场景管理入口
+
 ├── [meteors-render.js](https://github.com/vace/canvas-universe/blob/master/scripts/meteors-render.js#L1) 流星渲染
+
 ├── [moon-render.js](https://github.com/vace/canvas-universe/blob/master/scripts/moon-render.js#L1) 月亮
+
 ├── [solar-system.js](https://github.com/vace/canvas-universe/blob/master/scripts/solar-system.js#L1) 太阳系系统
+
 ├── [stars-render.js](https://github.com/vace/canvas-universe/blob/master/scripts/stars-render.js#L1) 星星
+
 ├── [system-to-the-moon.js](https://github.com/vace/canvas-universe/blob/master/scripts/system-to-the-moon.js#L1) 地月系
+
 ├── [utils.js](https://github.com/vace/canvas-universe/blob/master/scripts/utils.js#L1)
+
 └── [vendor.js](https://github.com/vace/canvas-universe/blob/master/scripts/vendor.js#L1)
 
 
