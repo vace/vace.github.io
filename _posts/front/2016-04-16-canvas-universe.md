@@ -92,19 +92,19 @@ tags: [Javascript,Canvas]
 
 ## 演示 ( ⊙ o ⊙ )！
 
- * [星星们✨✨✨✨](/a/canvas-universe/stars.html)
+ * [星星们✨✨✨✨](//o4e068rzf.qnssl.com/canvas-universe/stars.html)
 
- * [流星们🌠🌠🌠🌠](/a/canvas-universe/meteors.html)
+ * [流星们🌠🌠🌠🌠](//o4e068rzf.qnssl.com/canvas-universe/meteors.html)
 
- * [地球上的星空🌐🌐🌐🌐](/a/canvas-universe/earth-sky.html)
+ * [地球上的星空🌐🌐🌐🌐](//o4e068rzf.qnssl.com/canvas-universe/earth-sky.html)
 
- * [简单的地月系👀](/a/canvas-universe/system-to-the-moon.html)
+ * [简单的地月系👀](//o4e068rzf.qnssl.com/canvas-universe/system-to-the-moon.html)
 
- * [月球绕地球公转,地球绕太阳公转](/a/canvas-universe/earth-and-sun.html)
+ * [月球绕地球公转,地球绕太阳公转](//o4e068rzf.qnssl.com/canvas-universe/earth-and-sun.html)
 
- * [八大行星和太阳](/a/canvas-universe/solar-system.html)
+ * [八大行星和太阳](//o4e068rzf.qnssl.com/canvas-universe/solar-system.html)
 
- * [八大行星和卫星和太阳](/a/canvas-universe/solar-system-with-satellite.html) (木星卫星五十多...最多只显示5个了 -.-)
+ * [八大行星和卫星和太阳](//o4e068rzf.qnssl.com/canvas-universe/solar-system-with-satellite.html) (木星卫星五十多...最多只显示5个了 -.-)
 
  * 更多正在写...
 
