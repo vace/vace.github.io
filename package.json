@@ -8,6 +8,8 @@
 
     "push" : "git add --all && git commit -m addnewblog && git push",
 
+    "edit" : "git add --all && git commit -m edit-blog && git push",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
