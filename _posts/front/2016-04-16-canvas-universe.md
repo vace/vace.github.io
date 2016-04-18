@@ -102,7 +102,18 @@ tags: [Javascript,Canvas]
 
  * [月球绕地球公转,地球绕太阳公转](/a/canvas-universe/earth-and-sun.html)
 
- * [八大星星和太阳](/a/canvas-universe/solar-system.html))
+ * [八大行星和太阳](/a/canvas-universe/solar-system.html))
+
+ * [八大行星和卫星和太阳](/a/canvas-universe/solar-system-with-satellite.html)) (木星卫星五十多...最多只显示5个了 -.-)
 
  * 更多正在写...
+
+
+ ## 代码下载
+
+ [下载地址](https://github.com/vace/canvas-universe/archive/master.zip) 
+
+ [Github](https://github.com/vace/canvas-universe)
+
+ [Bug issues](https://github.com/vace/canvas-universe/issues)
 
