@@ -5,6 +5,11 @@ categories: [前端]
 tags: [react,react-native,ios]
 ---
 
+### 介绍
+React Native是伟大的互联网公司Facebook与2015年9月15日发布的，该可以让我们广大开发者使用JavaScript和React开发我们的应用，该提倡组件化开发，也就是说React Native给我们提供一个个封装好的组件让开发者来进行使用，甚至我们可以相关嵌套形成新的组件。使用React Native我们可以维护多种平台(Web,Android和IOS)的同一份业务逻辑核心代码来创建原生应用。现阶段Web APP的的体验还是无法达到Native APP的体验，所以这边fackbook更加强调的是learn once,write everywhere，应用前端我们使用js和React来开发不同平台的UI，下层核心模块编写复用的业务逻辑代码，提供应用开发效率。
+
+
+--------
 
 - [React-用于构建用户界面的JavaScript库](#react-用于构建用户界面的javascript库)
 - [Flexbox布局](#flexbox布局)
@@ -15,8 +20,10 @@ tags: [react,react-native,ios]
 - [Promise](#promise)
 - [fetch](#fetch)
 - [npm](#npm)
+- [资源收集](#资源收集)
 
-###React-用于构建用户界面的JavaScript库
+### React-用于构建用户界面的JavaScript库
+
 
 React是作为MVC中V存在的，React有一个JSX的编译器，JSX 让你可以用 HTML 语法去写 JavaScript 函数调用。
 
@@ -64,7 +71,8 @@ Flux是Facebook用来构建用户端的web应用的应用程序体系架构。�
 
 [极客学院-React 入门教程](http://wiki.jikexueyuan.com/project/react-tutorial/)
 
-###Flexbox布局
+### Flexbox布局
+
 
 Flex布局主要思想是让容器有能力让其子项目能够改变其宽度、高度(甚至顺序)，以最佳方式填充可用空间（主要是为了适应所有类型的显示设备和屏幕大小）。
 
@@ -120,7 +128,8 @@ flex-wrap(适用于伸缩容器)
 
 
 
-###组件的生命周期
+### 组件的生命周期
+
 
 React组件的生命周期如下图：
 
@@ -142,7 +151,8 @@ React组件的生命周期如下图：
 [React Native 中组件的生命周期](http://www.race604.com/react-native-component-lifecycle/)
 
 
-###Navigator
+### Navigator
+
 
 Navigator和NavigatorIOS都可以用来管理应用中“场景”的导航（也可以称作屏幕）。导航器建立了一个路由栈，用来弹出，推入或者替换路由状态。主要的区别在于NavigatorIOS使用了iOS中的UINavigationController类，而Navigator则完全用js重写了一个类似功能的React组件。
 
@@ -287,7 +297,8 @@ var SecondPageComponent = React.create({
 [新手理解Navigator的教程](http://bbs.reactnative.cn/topic/20/%E6%96%B0%E6%89%8B%E7%90%86%E8%A7%A3navigator%E7%9A%84%E6%95%99%E7%A8%8B) 对于Navigator讲解的特别详细
 
 
-###react-native与原生交互
+### react-native与原生交互
+
 在React Native中，一个“原生模块”就是一个实现了“RCTBridgeModule”协议的Objective-C类，其中RCT是ReaCT的缩写。
 
 为了实现RCTBridgeModule协议，你的类需要包含RCT_EXPORT_MODULE()宏。这个宏也可以添加一个参数用来指定在Javascript中访问这个模块的名字。如果你不指定，默认就会使用这个Objective-C类的名字。
@@ -400,10 +411,12 @@ AppRegistry.registerComponent('ThirdView', () => CommunicateNativeDemo);
 
 react-native中Obj-C和JavaScript通信原理简单说一下，和我们经常用的bridge差不多，Obj-C调用JavaScript很简单，可以通过webview的stringByEvaluatingJavaScriptFromString:方法调用JavaScript代码；JavaScript调用Obj-C，则是通过web view的代理方法shouldStartLoadWithRequest：来接收JavaScript的网络请求从而实现调用。
 
-###ES6与ES5
+### ES6与ES5
+
 ECMAScript 是 JavaScript 语言的国际标准，JavaScript 是 ECMAScript 的实现。ECMAScript 5和ECMAScript 6分别是2009年和2015年发布的，下面列出一些主要的ES6与ES5的不同写法。
 
-######引用
+###### 引用
+
 在ES5里，如果使用CommonJS标准，引入React包基本通过require进行，代码类似这样：
 
 ```javascript
@@ -427,7 +440,8 @@ import React, {
 } from 'react-native';
 ```
 
-######导出单个类
+###### 导出单个类
+
 在ES5里，要导出一个类给别的模块用，一般通过module.exports来导出
 
 
@@ -448,7 +462,8 @@ export default class MyComponent extends React.Component{
 }
 ```
 
-######给组件定义方法
+###### 给组件定义方法
+
 给组件定义方法不再用 名字: function()的写法，而是直接用名字()，在方法的最后也不能有逗号了。
 
 
@@ -480,7 +495,8 @@ class Photo extends React.Component {
 }
 ```
 
-######定义组件的属性类型和默认属性
+###### 定义组件的属性类型和默认属性
+
 在ES5里，属性类型和默认属性分别通过propTypes成员和getDefaultProps方法来实现
 
 ```javascript
@@ -530,7 +546,8 @@ class Video extends React.Component {
 }
 ```
 
-######初始化state
+###### 初始化state
+
 
 ```javascript
 //ES5 
@@ -572,7 +589,8 @@ class Video extends React.Component {
 }
 ```
 
-######把方法作为回调提供
+###### 把方法作为回调提供
+
 在JS中，this指的是，调用函数的那个对象。在ES5下，React.createClass会把所有的方法都bind一遍，这样可以提交到任意的地方作为回调函数，而this不会变化。
 
 ```javascript
@@ -881,7 +899,7 @@ runPolling();
 [使用Fetch API和ES6生成器来构建异步API](http://wwsun.github.io/posts/async-api-using-fetch-and-generators.html)
 
 
-###npm
+### npm
 react-native开发环境需要使用node.js,npm是Node.js默认的模块管理器，是一个命令行下的软件，用来安装和管理node模块。
 
 Node模块采用npm install命令安装。每个模块可以“全局安装”，也可以“本地安装”。两者的差异是模块的安装位置，以及调用方法。
@@ -939,5 +957,17 @@ dependencies是项目中依赖的模块，如果你想要开发自己的npm模�
 [react-native组件库](https://js.coach/react-native/)
 
 
-原文链接:https://github.com/coderyi/blog/blob/master/articles/2016/0122_react-native_first_lesson.md
+
+### 资源收集
+
+- [江清清的React Native专题](http://www.lcode.org/react-native/)
+- [稀土掘金的React Native专题](http://gold.xitu.io/#/tag/React%20Native)
+- [React-Native学习指南](https://github.com/ele828/react-native-guide)
+- [awesome-react-native](https://github.com/jondot/awesome-react-native)
+- [reactnative 组件](https://js.coach/)
+- [阮一峰的es6资料](http://es6.ruanyifeng.com)
+- [React-Native入门指南](https://github.com/vczero/react-native-lesson)
+
+
+部分转载:https://github.com/coderyi/blog/blob/master/articles/2016/0122_react-native_first_lesson.md
 [coderyi](https://github.com/coderyi)
