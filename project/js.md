@@ -45,10 +45,10 @@ permalink: /project/js/
 					</p>
 				</div>
 				<p class="description">
-					vue-spectre是一套Vue版本spectre的组件库
+					vue-spectre是一套Vue版本spectre的组件库 spectre components built with Vue.js
 				</p>
 				<p class="footer">
-					spectre components built with Vue.js
+					spectre components
 					<span class="todo">
 						<a href="https://github.com/vace/vue-spectre" class="github"><i class="icon">&#xe60d;</i></a>
 						<a href="https://vace.me/a/vue-spectre/index.html" class="github"><i class="icon">&#xe628;</i></a>
