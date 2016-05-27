@@ -41,7 +41,6 @@ permalink: /project/js/
 					<p>
 						<span>webpack</span>
 						<span>vue</span>
-						<span>vue-cli</span>
 						<span>spectre</span>
 					</p>
 				</div>
