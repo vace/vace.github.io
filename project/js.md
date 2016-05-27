@@ -19,7 +19,7 @@ permalink: /project/js/
 					</p>
 				</div>
 				<p class="description">
-					目前市面上有很多聊天机器人,如果让让众多机器人和你组成一个讨论组会有多么热闹呢...- .-
+					有很多聊天机器人,如果让让众多机器人和你组成一个讨论组会有多么热闹呢...- .-
 				</p>
 				<p class="footer">
 				机器人讨论组~
@@ -36,20 +36,23 @@ permalink: /project/js/
 			<div class="box-project">
 				<div class="cover">
 					<a href="" class="link">
-						<img src="{{site.image}}/empty.jpg" alt="">
+						<img src="{{site.image}}/project/js-project-main3.png" alt="">
 					</a>
 					<p>
-						<span>暂无</span>
+						<span>webpack</span>
+						<span>vue</span>
+						<span>vue-cli</span>
+						<span>spectre</span>
 					</p>
 				</div>
 				<p class="description">
-					空的...
+					vue-spectre是一套Vue版本spectre的组件库
 				</p>
 				<p class="footer">
-				空的...~
+					spectre components built with Vue.js
 					<span class="todo">
-						<a href="" class="github"><i class="icon">&#xe60d;</i></a>
-						<a href="" class="github"><i class="icon">&#xe628;</i></a>
+						<a href="https://github.com/vace/vue-spectre" class="github"><i class="icon">&#xe60d;</i></a>
+						<a href="https://vace.me/a/vue-spectre/index.html" class="github"><i class="icon">&#xe628;</i></a>
 					</span>
 				</p>
 			</div>

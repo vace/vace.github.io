@@ -8,6 +8,8 @@
 
     "push" : "git add --all && git commit -m addnewblog && git push",
 
+    "dist" : "git add --all && git commit -m editblog && git push && qrsync assets/upload.json",
+
     "edit" : "git add --all && git commit -m edit-blog && git push",
 
     "test": "echo \"Error: no test specified\" && exit 1"
