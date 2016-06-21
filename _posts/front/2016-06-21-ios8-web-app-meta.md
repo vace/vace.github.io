@@ -8,7 +8,7 @@ tags: [html5,ios,meta,link]
 最近因为业务需要将一些应用伪APP化,收集了一些信息,当把网站通过safari添加到主屏幕功能放置到移动设备桌面上以后，通过设置apple-touch-startup-image可以为WebApp设置一个类似NativeApp的启动画面。
 
 
-'''html
+```html
 <!doctype html>
 
 <!-- http://taylor.fausak.me/2015/01/27/ios-8-web-apps/ -->
@@ -158,4 +158,4 @@ tags: [html5,ios,meta,link]
     <h1>iOS 8 web app</h1>
   </body>
 </html>
-'''
+```
