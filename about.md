@@ -49,7 +49,7 @@ permalink: /about/
             </div>
         </div>
         <div class="col-sm-4 col-md-3 text-center">
-            <em>JavaScript</em>
+            <em>MySQL</em>
         </div>
     </div>
     
@@ -136,6 +136,7 @@ permalink: /about/
     <span class="label">php</span>
     <span class="label">javascript</span>
     <span class="label">python</span>
+    <span class="label">docker</span>
     <span class="label">nodejs</span>
     <span class="label">css</span>
     <span class="label">css3</span>
@@ -180,6 +181,7 @@ permalink: /about/
     <span class="label">phpstorm</span>
     <span class="label">chrome</span>
     <span class="label">github</span>
+    <span class="label">sketch</span>
     <span class="label">photoshop</span>
     <span class="label">Illustrator</span>
     
