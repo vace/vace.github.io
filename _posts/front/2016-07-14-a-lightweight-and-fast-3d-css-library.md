@@ -13,7 +13,7 @@ tags: [javascript,css3,typescript]
 **a lightweight and fast 3d css library.md,just 20KB, gzip:6.4 KB!!!**
 
 
-<script async src="//jsfiddle.net/vace/xvvcc83u/embed/result,js,html,css/dark/"></script>
+<iframe width="100%" height="400" src="//jsfiddle.net/vace/xvvcc83u/embed/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 ## Demo
 
