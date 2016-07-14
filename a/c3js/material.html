@@ -11,8 +11,8 @@
 	<meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>material 使用</title>
-    <base href="//o4e068rzf.qnssl.com/c3js/" />
-    <link rel="stylesheet" href="example.css">
+    <!-- <base href="//o4e068rzf.qnssl.com/c3js/" /> -->
+    <link rel="stylesheet" href="//o4e068rzf.qnssl.com/c3js/example.css">
 </head>
 <body>
     <link href="//cdn.bootcss.com/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" rel="stylesheet">
@@ -21,11 +21,11 @@
 	<div class="c3-view"></div>
 
     <script src="//cdn.bootcss.com/dat-gui/0.5.1/dat.gui.js"></script>
-    <script src="c3.min.js"></script>
+    <script src="//o4e068rzf.qnssl.com/c3js/c3.min.js"></script>
     <script>
         var material = new c3.Material({
             color:'#ffffff',
-            image:'url(images/leaves.png)',
+            image:'url(//o4e068rzf.qnssl.com/c3js/images/leaves.png)',
             size:'cover'
         })
 
@@ -39,6 +39,9 @@
                 },
                 set:function(val){
                     var mt = {}
+                    if(prop === 'image'){
+                        val = 'url(//o4e068rzf.qnssl.com/c3js/images/'+val+')'
+                    }
                     mt[prop] = val
                     material.update(mt)
                 },
@@ -56,7 +59,7 @@
             gui.add(text, 'size',['cover','contain','50%','auto auto','3em 25%'])
             gui.add(text, 'repeat',['repeat-x','repeat-y','repeat','space','round','no-repeat','round space'])
             gui.add(text, 'origin',['border-box','padding-box','content-box'])
-            gui.add(text, 'image',['url(images/leaves.png)','url(images/bark.png)','url(images/crash.gif)'])
+            gui.add(text, 'image',['leaves.png','bark.png','crash.gif'])
             gui.add(text, 'filter',{none:'',grayscale:'grayscale(0.1)',blur:'blur(3px)'})
             gui.add(text,'hidden')
             gui.add(text,'visible')

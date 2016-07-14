@@ -11,7 +11,7 @@
 	<meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>pano</title>
-    <base href="//o4e068rzf.qnssl.com/c3js/" />
+    <!-- <base href="//o4e068rzf.qnssl.com/c3js/" /> -->
     <style>
         *{
             padding: 0;margin: 0;
@@ -23,7 +23,7 @@
     <link href="//cdn.bootcss.com/github-fork-ribbon-css/0.2.0/gh-fork-ribbon.min.css" rel="stylesheet">
     <a class="github-fork-ribbon fixed" href="https://github.com/vace/c3.js" title="Fork me on GitHub">Fork me on GitHub</a>
     <a class="github-fork-ribbon fixed right-bottom" href="https://git.coding.net/vace/c3.js.git" title="Fork me on Coding">Fork me on Coding</a>
-    <script src="c3.min.js"></script>
+    <script src="//o4e068rzf.qnssl.com/c3js/c3.min.js"></script>
     <script>
         var rnd = c3.rndInt
 
@@ -38,7 +38,7 @@
         var materials = []
         for(var i = 0; i < 6 ; i++){
             materials.push(new c3.Material({
-                image:'url(images/pano/'+i+'.jpg)',
+                image:'url(//o4e068rzf.qnssl.com/c3js/images/pano/'+i+'.jpg)',
                 size:'100% 100%'
             }))
         }
