@@ -6,9 +6,10 @@ tags: [javascript,css3,typescript]
 ---
 
 
-使用`canvas`如果要在页面实现一些3d场景非常麻烦，虽然有诸如[three.js](https://github.com/mrdoob/three.js)、[Babylon.js](https://github.com/BabylonJS/Babylon.js)。`c3.js`是我用css写的一套简单的3d引擎，[css3d-engine](https://github.com/shrekshrek/css3d-engine)和[voxel.css](https://github.com/HunterLarco/voxel.css)这两个库给了我很多灵感。
+`c3.js` [github](https://github.com/vace/c3.js)，[coding](https://git.coding.net/vace/c3.js.git)是一个轻量快速的css3d库，`c3.js`是我用css实现的一套简单的3d引擎，[css3d-engine](https://github.com/shrekshrek/css3d-engine)和[voxel.css](https://github.com/HunterLarco/voxel.css)这两个库给了我很多灵感。
 
-# c3.js
+## 介绍
+
 
 **a lightweight and fast 3d css library.md,just 20KB, gzip:6.4 KB!!!**
 
