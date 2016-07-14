@@ -13,7 +13,9 @@ tags: [javascript,css3,typescript]
 **a lightweight and fast 3d css library.md,just 20KB, gzip:6.4 KB!!!**
 
 
-<iframe width="100%" height="400" src="//jsfiddle.net/vace/xvvcc83u/embed/result,js,html,css/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<div style="height: 300px;width: 100%;">
+    <script type="text/javascript" async defer src="//jsfiddle.net/vace/xvvcc83u/embed/result,js,html,css/dark/"></script>
+</div>
 
 ## Demo
 
@@ -26,6 +28,22 @@ tags: [javascript,css3,typescript]
 
 
 ## 使用
+
+
+`npm install c3.js`
+
+**CDM**
+
+`var c3 = require('c3')`
+
+**AMD**
+
+`define(['c3'],function(c3){})`
+
+**ES6**
+
+`import c3 from 'c3'`
+
 
 ### html
 
