@@ -14,7 +14,7 @@ tags: [javascript,css3,typescript]
 
 
 <div style="height: 300px;width: 100%;">
-    <iframe width="100%" height="300" src="//jsfiddle.net/vace/xvvcc83u/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    <iframe width="100%" height="400" src="//jsfiddle.net/vace/xvvcc83u/embedded/result,js/dark" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 </div>
 
 ## Demo
