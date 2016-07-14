@@ -8,13 +8,24 @@ tags: [javascript,css3,typescript]
 
 使用`canvas`如果要在页面实现一些3d场景非常麻烦，虽然有诸如[three.js](https://github.com/mrdoob/three.js)、[Babylon.js](https://github.com/BabylonJS/Babylon.js)。`c3.js`是我用css写的一套简单的3d引擎，[css3d-engine](https://github.com/shrekshrek/css3d-engine)和[voxel.css](https://github.com/HunterLarco/voxel.css)这两个库给了我很多灵感。
 
-#c3.js
+# c3.js
 
 **a lightweight and fast 3d css library.md,just 20KB, gzip:6.4 KB!!!**
 
-## 使用
 
-[demo](xx)
+<script async src="//jsfiddle.net/vace/xvvcc83u/embed/result,js,html,css/dark/"></script>
+
+## Demo
+
+- [预览](https://vace.me/a/c3js/space.html)
+- [平面，立方体，多面圆柱展示](https://vace.me/a/c3js/space.html)
+- [材质贴图](https://vace.me/a/c3js/material.html)
+- [仿3d全景](https://vace.me/a/c3js/pano.html)
+- [魔方](https://vace.me/a/c3js/rubik.html)
+- [带贴图的魔方](https://vace.me/a/c3js/superrubik.html)
+
+
+## 使用
 
 ### html
 
@@ -91,21 +102,21 @@ Display 类是可放在显示列表中的所有对象的基类。该显示列表
 
 **大部分方法支持链式调用，其中`position`,`rotate`,`translate`,`scale`参数其中一个为字符串时表示变化值，如`rotate('+0.5',0,0)` => `rotate.x += 0.5`**
 
-* css(param:Object):Display 为当前显示对象设置样式 如 `css({color:'red'})`
-* on(type:string,cb:Function[,capture:boolean]):Display 为显示对象添加事件
-* once(type:string,cb:Function[,capture:boolean]):Display 为显示对象添加事件,只触发一次
-* off(type:string,cb:Function[,capture:boolean]):Display 删除对象中删除侦听器
-* position(x:number|string,y?:number|string,z?:number|string):Display 设置显示对象的位置
-* getPosition():Point 获取显示对象的位置
-* size(x:number|string,y?:number|string,z?:number|string):Display 设置显示对象的尺寸和显示优先级
-* getSize():Point 获取显示对象的尺寸
-* rotate(x:number|string,y?:number|string,z?:number|string):Display 设置显示对象的旋转
-* getRotate():Quaternion 获取显示对象的旋转四元数
-* scale(x:number|string,y?:number|string,z?:number|string):Display 设置显示对象缩放
-* getScale():Vector3D 获取显示对象的缩放
-* translate(x:number|string,y?:number|string,z?:number|string):Display 设置显示对象位移
-* getTranslate():Vector3D 获取显示对象的位移
-* update():void 更新场景中的(position,translate,rotate,scale) 的设置
+* `css(param:Object):Display` 为当前显示对象设置样式 如 `css({color:'red'})`
+* `on(type:string,cb:Function[,capture:boolean]):Display` 为显示对象添加事件
+* `once(type:string,cb:Function[,capture:boolean]):Display` 为显示对象添加事件,只触发一次
+* `off(type:string,cb:Function[,capture:boolean]):Display` 删除对象中删除侦听器
+* `position(x:number|string,y?:number|string,z?:number|string):Display` 设置显示对象的位置
+* `getPosition():Point` 获取显示对象的位置
+* `size(x:number|string,y?:number|string,z?:number|string):Display` 设置显示对象的尺寸和显示优先级
+* `getSize():Point` 获取显示对象的尺寸
+* `rotate(x:number|string,y?:number|string,z?:number|string):Display` 设置显示对象的旋转
+* `getRotate():Quaternion` 获取显示对象的旋转四元数
+* `scale(x:number|string,y?:number|string,z?:number|string):Display` 设置显示对象缩放
+* `getScale():Vector3D` 获取显示对象的缩放
+* `translate(x:number|string,y?:number|string,z?:number|string):Display` 设置显示对象位移
+* `getTranslate():Vector3D` 获取显示对象的位移
+* `update():void` 更新场景中的(position,translate,rotate,scale) 的设置
 
 
 ------------
@@ -177,6 +188,7 @@ camera 为 stage 的直接子元素。可以通过 `stage.camera` 引用
 
 
 --------
+
 ### Cube Class extends Sprite
 
 一个三维立方体空间
