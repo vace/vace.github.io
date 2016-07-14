@@ -18,7 +18,7 @@ tags: [javascript,css3,typescript]
 ## Demo
 
 - [预览](https://vace.me/a/c3js/space.html)
-- [平面，立方体，多面圆柱展示](https://vace.me/a/c3js/space.html)
+- [平面，立方体，多面圆柱展示](https://vace.me/a/c3js/index.html)
 - [材质贴图](https://vace.me/a/c3js/material.html)
 - [仿3d全景](https://vace.me/a/c3js/pano.html)
 - [魔方](https://vace.me/a/c3js/rubik.html)
