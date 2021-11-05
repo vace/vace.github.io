@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release":"r.js -o ./mark.js && git add --all && git commit -m autocommit && git push && qrsync assets/upload.json",
+    "release":"r.js -o ./mark.js && git add --all && git commit -m autocommit && git push",
 
     "push" : "git add --all && git commit -m addnewblog && git push",
 
-    "dist" : "git add --all && git commit -m editblog && git push && qrsync assets/upload.json",
+    "dist" : "git add --all && git commit -m editblog && git push",
 
     "edit" : "git add --all && git commit -m edit-blog && git push",
 

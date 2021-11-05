@@ -13,7 +13,7 @@ email: ocdo@qq.com
 production_url: https://vace.me
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://vace.me" # the base hostname & protocol for your site
-cdn: "https://o4e068rzf.qnssl.com" # 资源cdn地址
+cdn: "https://h5.ahmq.net/res/myblog/assets" # 资源cdn地址
 permalink: /:year:month:day-:title.html
 
 # Build settings
@@ -40,12 +40,12 @@ user:
 
 # 这里替换成线上的静态资源的链接。 主要最后的"/"。也要注意css使用的字体的链接。
 assets:
-  css: https://o4e068rzf.qnssl.com/blog/styles
-  js: https://o4e068rzf.qnssl.com/blog/scripts
-  image: https://o4e068rzf.qnssl.com/blog/images
+  css: https://h5.ahmq.net/res/myblog/assets/styles
+  js: https://h5.ahmq.net/res/myblog/assets/scripts
+  image: https://h5.ahmq.net/res/myblog/assets/images
 
 # md快速引入路径
-image: https://o4e068rzf.qnssl.com/blog/images
+image: https://h5.ahmq.net/res/myblog/assets/images
 # image: /dev/images
 
 # 选择模式 开发模式还是发布模式。上线之前务必改成pub！

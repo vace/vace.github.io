@@ -9,7 +9,7 @@ permalink: /project/js/
 		<div class="col-xs-12 col-md-4">
 			<div class="box-project">
 				<div class="cover">
-					<a href="http://o4e068rzf.qnssl.com/rebot-chat/index.html" class="link">
+					<a href="https://h5.ahmq.net/res/myblog/demo/vue-rebot-chat/index.html" class="link">
 						<img src="{{site.image}}/project/js-project-main2.jpeg" alt="">
 					</a>
 					<p>
@@ -25,7 +25,7 @@ permalink: /project/js/
 				机器人讨论组~
 					<span class="todo">
 						<a href="https://github.com/vace/robotChatter" class="github"><i class="icon">&#xe60d;</i></a>
-						<a href="http://o4e068rzf.qnssl.com/rebot-chat/index.html" class="github"><i class="icon">&#xe628;</i></a>
+						<a href="https://h5.ahmq.net/res/myblog/demo/vue-rebot-chat/index.html" class="github"><i class="icon">&#xe628;</i></a>
 					</span>
 				</p>
 			</div>
