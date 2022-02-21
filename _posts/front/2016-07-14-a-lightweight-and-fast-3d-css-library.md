@@ -20,12 +20,12 @@ tags: [javascript,css3,typescript]
 
 ## Demo
 
-- [预览](https://vace.me/a/c3js/space.html)
-- [平面，立方体，多面圆柱展示](https://vace.me/a/c3js/index.html)
-- [材质贴图](https://vace.me/a/c3js/material.html)
-- [仿3d全景](https://vace.me/a/c3js/pano.html)
-- [魔方](https://vace.me/a/c3js/rubik.html)
-- [带贴图的魔方](https://vace.me/a/c3js/superrubik.html)
+- [预览](https://h5.ahmq.net/res/myblog/demo/css3d-csjs/space.html)
+- [平面，立方体，多面圆柱展示](https://h5.ahmq.net/res/myblog/demo/css3d-csjs/index.html)
+- [材质贴图](https://h5.ahmq.net/res/myblog/demo/css3d-csjs/material.html)
+- [仿3d全景](https://h5.ahmq.net/res/myblog/demo/css3d-csjs/pano.html)
+- [魔方](https://h5.ahmq.net/res/myblog/demo/css3d-csjs/rubik.html)
+- [带贴图的魔方](https://h5.ahmq.net/res/myblog/demo/css3d-csjs/superrubik.html)
 
 
 ## 使用

@@ -4,14 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release":"r.js -o ./mark.js && git add --all && git commit -m autocommit && git push",
-
-    "push" : "git add --all && git commit -m addnewblog && git push",
-
-    "dist" : "git add --all && git commit -m editblog && git push",
-
-    "edit" : "git add --all && git commit -m edit-blog && git push",
-
+    "release": "r.js -o ./mark.js && git add --all && git commit -m autocommit && git push",
+    "push": "git add --all && git commit -m addnewblog && git push",
+    "dist": "git add --all && git commit -m editblog && git push",
+    "edit": "git add --all && git commit -m edit-blog && git push",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/vace/vace.github.io/issues"
   },
-  "homepage": "https://github.com/vace/vace.github.io#readme"
+  "homepage": "https://github.com/vace/vace.github.io#readme",
+  "dependencies": {}
 }
