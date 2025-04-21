@@ -1,12 +1,9 @@
 import path from 'node:path'
 import fs from 'node:fs'
 
-const CURRENT_DIR = process.cwd()
-
 export function getDirectoryPath(dir: string) {
-  return path.join(CURRENT_DIR, dir)
+  return path.join(process.cwd(), dir)
 }
-
 
 export type GetDirectoryFilesOptions = {
   recursive?: boolean
@@ -69,7 +66,7 @@ export async function getDirectoryFiles(dir: string, options?: GetDirectoryFiles
  */
 export async function getFileContent(filePath: string) {
   try {
-    const absolutePath = path.isAbsolute(filePath) ? filePath : path.join(CURRENT_DIR, filePath)
+    const absolutePath = path.isAbsolute(filePath) ? filePath : path.join(process.cwd(), filePath)
     const content = await fs.promises.readFile(absolutePath, 'utf8')
     return content
   } catch (error) {
