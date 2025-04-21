@@ -4,6 +4,13 @@ import type { NextConfig } from "next"
 // const withMdx = createMDX({})
 
 const nextConfig: NextConfig = {
+  // output: 'standalone',
+
+  // caveats: _posts
+  outputFileTracingIncludes: {
+    'markdown': [ "./_posts/**/*.md", "./_posts/**/*.mdx"]
+  },
+
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 
   images: {
