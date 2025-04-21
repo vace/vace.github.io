@@ -10,43 +10,18 @@ import clsx from 'clsx'
 import Navbar from '@/components/layout/navbar'
 import Footer from '@/components/layout/footer'
 import Body from '@/components/layout/body'
-import { WebsiteProfile } from '@/common/config'
+import { WebMetadata } from '@/common/config'
 import { WaveBackground } from '@/components/ui/wave-background'
 import { getBackgroundElementList } from '@/lib/utils'
 
-export const metadata: Metadata = {
-  metadataBase: new URL(WebsiteProfile.URL),
-  title: {
-    default: WebsiteProfile.Title,
-    template: `%s | ${WebsiteProfile.Title}`,
-  },
-  description: WebsiteProfile.Description,
-  openGraph: {
-    title: WebsiteProfile.Title,
-    description: WebsiteProfile.Description,
-    url: WebsiteProfile.URL,
-    siteName: WebsiteProfile.Title,
-    locale: 'en_US',
-    type: 'website',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-}
+export const metadata: Metadata = WebMetadata
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+
   const backgroundList = getBackgroundElementList()
 
   return (

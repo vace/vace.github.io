@@ -1,9 +1,10 @@
-import { TOCItemType } from "@/components/toc/types"
-import { CompiledMdx } from "../mdx/mdx-compile"
+import { TOCItemType } from '@/components/toc/types'
+
+import { CompiledMdx } from '../mdx/mdx-compile'
 
 export type BlogMetadata = {
   title: string
-  date: Date
+  date: string
   summary: string
   tags: string[]
   image?: string

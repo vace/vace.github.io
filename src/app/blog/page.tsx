@@ -1,8 +1,9 @@
-import React from 'react'
 import { Metadata } from 'next'
-import { getAllPostList } from '@/modules/blog/model'
+import React from 'react'
+
 import PostListItem from '@/modules/blog/components/PostListItem'
 import PostPagination from '@/modules/blog/components/PostPagination'
+import { getAllPostList } from '@/modules/blog/model'
 
 export const metadata: Metadata = {
   title: 'Blog',

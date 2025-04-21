@@ -1,69 +1,31 @@
 'use server'
 
-import matter from 'gray-matter'
-import { BlogStoragePath, WebsiteProfile } from '@/common/config'
-import { getDirectoryFiles } from '@/lib/fs'
-import { formatDate } from '@/lib/utils'
 import { Metadata } from 'next'
+
+import { WebsiteProfile } from '@/common/config'
+import readingTime from '@/lib/reading-time'
+import { formatDate } from '@/lib/utils'
+
+import { mdxCompile } from '../mdx/mdx-compile'
 import { BlogPost, BlogPostInfo, BlogTag } from './types'
 import { generatePostUrl } from './utils'
-import readingTime from '@/lib/reading-time'
-import { mdxCompile } from '../mdx/mdx-compile'
 
 type BlogResult = {
   blogs: BlogPost[]
   tags: BlogTag[]
 }
 
-let blogListCache: BlogResult | null = null
+let allPostListCache: Promise<BlogResult>
+try {
+  // @ts-ignore
+  allPostListCache = import('./.posts.cache.json') as Promise<BlogResult>
+} catch (error) {
+  console.error('[Blog] Error loading blog list:', error)
+  allPostListCache = Promise.resolve({ blogs: [], tags: [] })
+}
 
 export async function getAllPostList() {
-  if (blogListCache) {
-    return blogListCache
-  }
-  const files = await getDirectoryFiles(BlogStoragePath, {
-    recursive: true,
-    extensions: ['.mdx', '.md'],
-    isReadFile: true,
-  })
-  const blogList: BlogPost[] = []
-  const tagNameMap: Map<string, BlogTag> = new Map()
-  for (const file of files) {
-    if (!file.content) {
-      continue
-    }
-    const metadata = matter(file.content)
-    const filetype = file.name.endsWith('.mdx') ? 'mdx' : 'md'
-    const tags = metadata.data.tags || []
-    const blog: BlogPost = {
-      type: filetype,
-      name: file.name,
-      metadata: {
-        title: metadata.data.title,
-        date: metadata.data.date || new Date(),
-        summary: metadata.data.summary,
-        tags: tags,
-      },
-      content: metadata.content,
-    }
-    for (const tag of tags) {
-      if (!tagNameMap.has(tag)) {
-        tagNameMap.set(tag, { name: tag, count: 0 })
-      }
-      tagNameMap.get(tag)!.count++
-    }
-    blogList.push(blog)
-  }
-  const cache = {
-    blogs: blogList.sort((a, b) => {
-      return b.metadata.date.getTime() - a.metadata.date.getTime()
-    }),
-    tags: Array.from(tagNameMap.values()),
-  }
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`[Blog] load all posts: ${cache.blogs.length} posts`)
-  }
-  return cache
+  return allPostListCache
 }
 
 export async function generatePostMeta(name: string): Promise<Metadata | null> {
@@ -144,6 +106,5 @@ export async function findPostBySlug(slug: string): Promise<BlogPost | null> {
 
 if (process.env.NODE_ENV === 'development') {
   console.log('development mode, clearing blog cache')
-  blogListCache = null
   postInfoCache.clear()
 }

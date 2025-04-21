@@ -1,10 +1,12 @@
-import React from 'react'
+import { BookmarkIcon, CalendarIcon, TagIcon } from 'lucide-react'
 // import Link from 'next/link'
 import { Link } from 'next-view-transitions'
+import React from 'react'
+
 import { Badge } from '@/components/ui/badge'
 import { cn, formatDate } from '@/lib/utils'
-import { CalendarIcon, TagIcon, BookmarkIcon } from 'lucide-react'
 import { generatePostUrl } from '@/modules/blog/utils'
+
 import { BlogPost } from '../types'
 
 export default function PostListItem({ blog }: { blog: BlogPost }) {
@@ -25,7 +27,7 @@ export default function PostListItem({ blog }: { blog: BlogPost }) {
 
         <div className="flex items-center gap-2 text-sm text-muted-foreground whitespace-nowrap">
           <CalendarIcon className="h-4 w-4" />
-          <time dateTime={metadata.date.toISOString()}>
+          <time dateTime={metadata.date}>
             {formatDate(metadata.date)}
           </time>
         </div>

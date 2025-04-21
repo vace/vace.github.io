@@ -1,10 +1,22 @@
 // import createMDX from '@next/mdx'
 import type { NextConfig } from "next"
+import { once } from 'lodash-es'
+import { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } from 'next/constants'
+
+import { generatorPostCache } from './bin/generator-post-cache'
 
 // const withMdx = createMDX({})
 
+const onceGenerateCache = once(generatorPostCache)
+
+export default async function run(phase: string, config: any) {
+  if (phase === PHASE_PRODUCTION_BUILD || phase === PHASE_DEVELOPMENT_SERVER) {
+    await onceGenerateCache()
+  }
+  return Promise.resolve(nextConfig)
+}
+
 const nextConfig: NextConfig = {
-  // output: 'standalone',
 
   // caveats: _posts
   outputFileTracingIncludes: {
@@ -35,5 +47,3 @@ const nextConfig: NextConfig = {
     viewTransition: true,
   }
 }
-
-export default nextConfig

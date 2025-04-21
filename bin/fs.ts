@@ -1,5 +1,5 @@
-import path from 'node:path'
 import fs from 'node:fs'
+import path from 'node:path'
 
 export function getDirectoryPath(dir: string) {
   return path.join(process.cwd(), dir)
@@ -36,10 +36,10 @@ export async function getDirectoryFiles(dir: string, options?: GetDirectoryFiles
 
   async function scanDirectory(currentPath: string) {
     const files = await fs.promises.readdir(currentPath, { withFileTypes: true })
-    
+
     for (const file of files) {
       const filePath = path.join(currentPath, file.name)
-      
+
       if (file.isDirectory() && recursive) {
         await scanDirectory(filePath)
       } else if (file.isFile()) {
@@ -72,5 +72,16 @@ export async function getFileContent(filePath: string) {
   } catch (error) {
     console.error(`Error reading file ${filePath}:`, error)
     return null
+  }
+}
+
+export async function putFileContent(filePath: string, content: string) {
+  try {
+    const absolutePath = path.isAbsolute(filePath) ? filePath : path.join(process.cwd(), filePath)
+    await fs.promises.writeFile(absolutePath, content, 'utf8')
+    return true
+  } catch (error) {
+    console.error(`Error writing file ${filePath}:`, error)
+    return false
   }
 }

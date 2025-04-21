@@ -1,13 +1,14 @@
-import React from 'react'
-import { Metadata } from 'next'
-import { Badge } from '@/components/ui/badge'
-import { getAllPostList } from "@/modules/blog/model"
+import dayjs from 'dayjs'
 import { CalendarIcon, TagIcon } from 'lucide-react'
-import { formatDate } from '@/lib/utils'
+import { Metadata } from 'next'
 import { Link } from 'next-view-transitions'
-import { generatePostUrl } from '@/modules/blog/utils'
-import { cn } from '@/lib/utils'
+import React from 'react'
+
+import { Badge } from '@/components/ui/badge'
+import { cn, formatDate } from '@/lib/utils'
+import { getAllPostList } from '@/modules/blog/model'
 import { BlogPost } from '@/modules/blog/types'
+import { generatePostUrl } from '@/modules/blog/utils'
 
 export const metadata: Metadata = {
   title: 'Archive',
@@ -57,7 +58,7 @@ export default async function ArchivePage() {
                   >
                     <div className="hidden sm:flex items-center text-muted-foreground text-sm gap-1 mr-2">
                       <CalendarIcon size={14} />
-                      <time dateTime={post.metadata.date.toISOString()}>
+                      <time dateTime={post.metadata.date}>
                         {formatDate(post.metadata.date, 'MMM. DD')}
                       </time>
                     </div>
@@ -94,7 +95,7 @@ function groupByYears(blogs: BlogPost[]) {
   const indexed = new Map<number, IYearPost>()
 
   for (const blog of blogs) {
-    const year = blog.metadata.date.getFullYear()
+    const year = dayjs(blog.metadata.date).year()
     if (!indexed.has(year)) {
       indexed.set(year, { year, posts: [] })
     }

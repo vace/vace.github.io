@@ -1,5 +1,4 @@
-// blog storage path
-export const BlogStoragePath = './_posts'
+import { Metadata } from "next"
 
 // website info
 export const WebsiteProfile = {
@@ -15,3 +14,31 @@ export const WebsiteProfile = {
 }
 
 export const MaxTocDepth = 3
+
+export const WebMetadata: Metadata = {
+  metadataBase: new URL(WebsiteProfile.URL),
+  title: {
+    default: WebsiteProfile.Title,
+    template: `%s | ${WebsiteProfile.Title}`,
+  },
+  description: WebsiteProfile.Description,
+  openGraph: {
+    title: WebsiteProfile.Title,
+    description: WebsiteProfile.Description,
+    url: WebsiteProfile.URL,
+    siteName: WebsiteProfile.Title,
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}

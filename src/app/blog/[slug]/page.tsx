@@ -1,9 +1,10 @@
 import { notFound } from 'next/navigation'
+
+import { PostBody } from '@/modules/blog/components/PostBody'
+import { PostHeader } from '@/modules/blog/components/PostHeader'
 import { findPostBySlug, generatePostMeta, getAllPostList, getPostInfo } from '@/modules/blog/model'
 import { generatePostJsonID } from '@/modules/blog/utils'
-import { PostHeader } from '@/modules/blog/components/PostHeader'
 import { Separator } from '@radix-ui/react-dropdown-menu'
-import { PostBody } from '@/modules/blog/components/PostBody'
 
 type Props = {
   params: Promise<{ slug: string }>

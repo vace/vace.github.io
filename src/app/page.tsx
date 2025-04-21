@@ -1,5 +1,5 @@
-import { getAllPostList } from '@/modules/blog/model'
 import { AboutMeSection, HeroSection, SpecialSection } from '@/components/pages/home'
+import { getAllPostList } from '@/modules/blog/model'
 
 // 首页内容
 export default async function Page() {

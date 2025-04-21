@@ -1,5 +1,5 @@
-import { WebsiteProfile } from "@/common/config"
-import { getAllPostList } from "@/modules/blog/model"
+import { WebsiteProfile } from '@/common/config'
+import { getAllPostList } from '@/modules/blog/model'
 
 export default async function sitemap() {
   const { blogs } = await getAllPostList()

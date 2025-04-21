@@ -1,8 +1,8 @@
+import { CalendarIcon, ClockIcon, TagIcon } from 'lucide-react'
+
+import { Badge } from '@/components/ui/badge'
 import { formatDate } from '@/lib/utils'
 import { BlogMetadata } from '@/modules/blog/types'
-import { CalendarIcon, ClockIcon, TagIcon } from 'lucide-react'
-import { Badge } from '@/components/ui/badge'
-
 
 export function PostHeader({
   metadata,
@@ -20,7 +20,7 @@ export function PostHeader({
       <div className="flex flex-wrap gap-4 text-muted-foreground mb-4 text-sm">
         <div className="flex items-center gap-2">
           <CalendarIcon className="h-4 w-4" />
-          <time dateTime={metadata.date.toISOString()}>
+          <time dateTime={metadata.date}>
             {formatDate(metadata.date)}
           </time>
         </div>

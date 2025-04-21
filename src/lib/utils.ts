@@ -1,13 +1,13 @@
-import { clsx, type ClassValue } from "clsx"
-import dayjs from "dayjs"
-import { CSSProperties, Ref, RefCallback } from "react"
-import { twMerge } from "tailwind-merge"
+import { ClassValue, clsx } from 'clsx'
+import dayjs, { ConfigType } from 'dayjs'
+import { CSSProperties, Ref, RefCallback } from 'react'
+import { twMerge } from 'tailwind-merge'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function formatDate(date: Date, format: string = 'MMM. D, YYYY') {
+export function formatDate(date: ConfigType, format: string = 'MMM. D, YYYY') {
   return dayjs(date).format(format)
 }
 
