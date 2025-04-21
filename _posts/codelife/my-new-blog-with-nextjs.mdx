@@ -1,0 +1,108 @@
+---
+title: "博客重构，从 Bootstrap 到 Next.js + MDX"
+date: 2025-04-19
+summary: "记录了个人博客从 Bootstrap 到现代化的 Next.js 与 MDX 技术栈的转变历程，展示了新博客的各种 MDX 高级功能，如内容卡片、提示组件、代码对比与多语言代码切换等交互式特性。"
+tags: [Next.js, React, MDX, Frontend, JavaScript]
+---
+
+
+export function MySlideComponent () {
+  const handleChange = (e) => {
+    const html = document.querySelector('html')
+    const volume = (parseInt(e.target.value, 10) / 100)
+    // use oklch set -> --background, --foreground, --muted
+    html.style.setProperty('--background', `hsl(0 0% ${volume * 100}%)`)
+    html.style.setProperty('--foreground', `hsl(0 0% ${100 - volume * 100}%)`)
+    html.style.setProperty('--muted', `hsl(0 0% ${volume * 100}%)`)
+    
+  }
+  return (
+    <div className="flex items-center gap-x-4">
+      <input type="range" name="value" min="0" max="100" onChange={handleChange} />
+      <label htmlFor="value">尝试拖动改变</label>
+    </div>
+  )
+}
+
+## 写在重构之前
+
+我的个人博客已经陪伴我走过了八个年头。那些用 `Bootstrap` 搭建的页面，记录着我初学编程时的青涩代码，见证了前端生态从后端渲染到前后端分离、到单页应用、再到如今的服务端渲染的演变。
+我很早之前就想重构了，但是没有足够多的精力去做这件事，随着AI编码的迭代，我决定彻底重构这个"老伙计"。
+
+## 重构的理由
+
+### 告别过时的技术栈
+早期的技术选型如今早已被淘汰，千篇一律的栅格布局与当下流行的极简设计格格不入，也难以实现动态内容加载和现代化的开发体验。
+
+### 拥抱现代技术栈
+重构成为学习新技术的最佳实践场，我选择了 `Next.js` 和 `MDX` 作为新一代的技术栈，前者提供了强大的服务端渲染和静态生成能力，后者则让 Markdown 与 React 的结合变得无缝。
+
+### 提升用户体验
+新博客将提供更快的加载速度、更流畅的交互体验和更丰富的内容展示方式，后续会更新一些交互式文档和交互式代码沙盒的功能。
+
+> 重构不仅仅是技术栈的更新，更是对用户体验的全面升级。
+
+## 新博客的 MDX 展示
+
+Mdx 支持更加丰富的组件化展示，比软下面这样：
+
+<MySlideComponent />
+
+### 内容卡片系统
+
+<Cards>
+  <Card title="Fetching, Caching, and Revalidating">
+    Learn more about caching in Next.js
+  </Card>
+  <Card title="href is optional">Learn more about `fetch` in Next.js.</Card>
+</Cards>
+
+### 提示组件
+让提示信息更具表现力：
+
+<Callout type="warn" title="注意事项">
+  在服务端组件中使用 window 对象会导致渲染错误
+</Callout>
+
+<Callout type="info">
+  推荐使用 async/await 处理数据获取
+</Callout>
+
+### 代码对比
+清晰展示代码变更差异：
+
+```ts
+function oldComponent() {  // [!code --]
+  return <div>旧组件</div>  // [!code --]
+}  // [!code --]
+
+function NewComponent() {  // [!code ++]
+  return <AppFrame>新组件</AppFrame>  // [!code ++]
+}
+```
+
+### 多语言代码切换
+便捷展示不同技术方案的实现：
+
+```ts tab="React 实现"
+function Button() {
+  return <button>Click</button>
+}
+```
+
+```vue tab="Vue 实现"
+<template>
+  <button>Click</button>
+</template>
+```
+
+### Npm Package 组件
+
+```package-install
+npm i next -D
+```
+
+## 写在最后
+
+技术永远在变，但对极致体验的追求永不止步！
+
