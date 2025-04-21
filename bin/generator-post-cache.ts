@@ -10,10 +10,12 @@ const BlogOutputPath = './src/modules/blog/.posts.cache.json'
 
 export async function generatorPostCache() {
   const buildStartAt = Date.now()
-  const current = await import(path.resolve(process.cwd(), BlogOutputPath))
-  if (current && current.version && (buildStartAt - current.version) < 2000) {
-    return current
-  }
+  try {
+    const current = await import(path.resolve(process.cwd(), BlogOutputPath))
+    if (current && current.version && (buildStartAt - current.version) < 2000) {
+      return current
+    }
+  } catch (error) {}
 
   const files = await getDirectoryFiles(BlogStoragePath, {
     recursive: true,
