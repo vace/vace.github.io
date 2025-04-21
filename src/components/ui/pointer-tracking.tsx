@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useRef, CSSProperties } from "react";
-import { motion } from "motion/react";
-import { useTheme } from "next-themes";
+import { motion } from 'motion/react'
+import { useTheme } from 'next-themes'
+import React, { CSSProperties, useEffect, useRef, useState } from 'react'
 
 interface PointerTrackingProps extends React.HTMLAttributes<HTMLDivElement> {
   /**

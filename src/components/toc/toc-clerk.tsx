@@ -1,12 +1,14 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { ArrowUpIcon, TextIcon } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+
+import { MaxTocDepth } from '@/common/config'
+import { cn } from '@/lib/utils'
+
 import * as Primitive from './primitive'
-import { TOCItemType } from './types';
-import { TocThumb } from './toc-thumb';
-import { cn } from '@/lib/utils';
-import { ArrowUpIcon, SquareArrowUp, TextIcon } from 'lucide-react';
-import { Toc, TOCScrollArea } from './toc';
-import { MaxTocDepth } from '@/common/config';
+import { Toc, TOCScrollArea } from './toc'
+import { TocThumb } from './toc-thumb'
+import { TOCItemType } from './types'
 
 export default function ClerkTOCItems({ items }: { items: TOCItemType[] }) {
   const containerRef = useRef<HTMLDivElement>(null);

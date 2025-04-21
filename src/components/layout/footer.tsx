@@ -1,7 +1,7 @@
 "use client"
 
-import * as React from "react"
-import Link from "next/link"
+import Link from 'next/link'
+import * as React from 'react'
 
 export function Footer() {
   const year = new Date().getFullYear()

@@ -1,9 +1,10 @@
 'use client';
 
+import './image-zoom.css'
+
 import Image, { ImageProps } from 'next/image'
-import { type ImgHTMLAttributes } from 'react';
-import './image-zoom.css';
-import Zoom, { type UncontrolledProps } from 'react-medium-image-zoom';
+import { ImgHTMLAttributes } from 'react'
+import Zoom, { UncontrolledProps } from 'react-medium-image-zoom'
 
 export type ImageZoomProps = ImageProps & {
   /**

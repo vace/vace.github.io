@@ -1,7 +1,9 @@
-import { type HTMLAttributes, type RefObject, useEffect, useRef } from 'react';
-import { useActiveAnchors } from './primitive';
-import { useEffectEvent } from '@/hooks/use-effect-event';
-import { useOnChange } from '@/hooks/use-on-change';
+import { HTMLAttributes, RefObject, useEffect, useRef } from 'react'
+
+import { useEffectEvent } from '@/hooks/use-effect-event'
+import { useOnChange } from '@/hooks/use-on-change'
+
+import { useActiveAnchors } from './primitive'
 
 export type TOCThumb = [top: number, height: number];
 

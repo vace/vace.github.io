@@ -1,4 +1,5 @@
-import { RootContent } from "mdast";
+import { RootContent } from 'mdast'
+
 import type { Element as HastElement, Root as HastRoot, RootContent as HastRootContent  } from 'hast';
 import type { Expression, Program } from 'estree';
 

@@ -1,14 +1,12 @@
 'use client';
 
-import { ChevronDown } from 'lucide-react';
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '../ui/collapsible';
-import { ComponentProps } from 'react';
-import { cn } from '@/lib/utils';
-import { TOCItemType } from '../../../components/toc/types';
+import { ChevronDown } from 'lucide-react'
+import { ComponentProps } from 'react'
+
+import { TOCItemType } from '@/components/toc/types'
+import { cn } from '@/lib/utils'
+
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../ui/collapsible'
 
 export interface InlineTocProps extends ComponentProps<typeof Collapsible> {
   items: TOCItemType[];

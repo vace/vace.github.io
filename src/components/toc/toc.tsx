@@ -1,16 +1,13 @@
 'use client';
 
-import { cn } from '@/lib/utils';
-import {
-  type ComponentProps,
-  type HTMLAttributes,
-  type ReactNode,
-  useRef,
-} from 'react';
-import { ScrollArea, ScrollViewport } from '../ui/scroll-area';
-import * as Primitive from './primitive';
-import { TocThumb } from './toc-thumb';
-import { TOCItemType } from './types';
+import { ComponentProps, HTMLAttributes, ReactNode, useRef } from 'react'
+
+import { cn } from '@/lib/utils'
+
+import { ScrollArea, ScrollViewport } from '../ui/scroll-area'
+import * as Primitive from './primitive'
+import { TocThumb } from './toc-thumb'
+import { TOCItemType } from './types'
 
 export interface TOCProps {
   /**

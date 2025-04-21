@@ -1,8 +1,9 @@
 import type { Code, Root } from 'mdast';
 import type { Transformer } from 'unified';
-import { visit } from 'unist-util-visit';
-import convert from 'npm-to-yarn';
-import { createEstreeElement, expressionToAttribute } from '../utils';
+import convert from 'npm-to-yarn'
+import { visit } from 'unist-util-visit'
+
+import { createEstreeElement, expressionToAttribute } from '../utils'
 
 interface PackageManager {
   name: string;

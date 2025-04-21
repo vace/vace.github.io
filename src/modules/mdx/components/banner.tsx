@@ -1,9 +1,11 @@
 'use client';
 
-import { type HTMLAttributes, useEffect, useState } from 'react';
-import { X } from 'lucide-react';
-import { buttonVariants } from '../ui/button';
-import { cn } from '@/lib/utils';
+import { X } from 'lucide-react'
+import { HTMLAttributes, useEffect, useState } from 'react'
+
+import { cn } from '@/lib/utils'
+
+import { buttonVariants } from '../ui/button'
 
 export function Banner({
   id,

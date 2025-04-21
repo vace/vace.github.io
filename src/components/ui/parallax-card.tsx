@@ -1,5 +1,6 @@
-import { useState, useRef } from 'react'
 import { motion, useMotionValue } from 'motion/react'
+import { useRef, useState } from 'react'
+
 import { cn } from '@/lib/utils'
 
 export const ParallaxCard = ({ children, className }: { children: React.ReactNode, className?: string }) => {

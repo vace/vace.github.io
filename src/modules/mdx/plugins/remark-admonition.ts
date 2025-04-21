@@ -1,7 +1,8 @@
-import { type Transformer } from 'unified';
-import { visit } from 'unist-util-visit';
-import { type Root, type RootContent } from 'mdast';
-import { flattenNode } from '../utils';
+import { Root, RootContent } from 'mdast'
+import { Transformer } from 'unified'
+import { visit } from 'unist-util-visit'
+
+import { flattenNode } from '../utils'
 
 export interface RemarkAdmonitionOptions {
   tag?: string;

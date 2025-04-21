@@ -1,20 +1,8 @@
 'use client';
-import {
-  type DependencyList,
-  type ReactNode,
-  useId,
-  useMemo,
-  useRef,
-  use,
-  useState,
-  useLayoutEffect,
-} from 'react';
-import {
-  _highlight,
-  _renderHighlight,
-  highlight,
-  type HighlightOptions,
-} from './shiki';
+import { DependencyList, ReactNode, use, useId, useLayoutEffect, useMemo, useRef, useState } from 'react'
+
+import { _highlight, _renderHighlight, highlight, HighlightOptions } from './shiki'
+
 import type { RegexEngine } from 'shiki';
 import type { Root } from 'hast';
 

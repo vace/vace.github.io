@@ -1,24 +1,21 @@
 "use client"
 
-import { useState, useRef, useEffect } from 'react'
-import { useTheme } from "next-themes";
+import { ArrowRight, BookOpen, ChevronRight } from 'lucide-react'
 import { motion } from 'motion/react'
-import { cn } from '@/lib/utils'
-import { WebsiteProfile } from '@/common/config'
 import Link from 'next/link'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { useEffect } from 'react'
+
+import { WebsiteProfile } from '@/common/config'
+import { mainSkills } from '@/common/skills'
 import { PinContainer } from '@/components/ui/3d-pin'
-import { ArrowRight, ChevronRight, Cpu, Code, BookOpen, Github, Coffee, Sparkles } from 'lucide-react'
-import { getAllPostList } from '@/modules/blog/model'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { BlogPost, BlogTag } from '@/modules/blog/types'
-import { ParallaxCard } from '@/components/ui/parallax-card'
-import { mainSkills } from '@/common/skills';
-import { generatePostUrl } from '@/modules/blog/utils';
-import GithubIcon from '../icons/Github';
+import { generatePostUrl } from '@/modules/blog/utils'
+
+import GithubIcon from '../icons/Github'
 
 export const HeroSection = () => {
   return (

@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef } from 'react'
 
 /**
  * Don't use this, could be deleted anytime.

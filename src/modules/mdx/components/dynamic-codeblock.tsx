@@ -1,8 +1,9 @@
 'use client';
-import { cn } from '@/lib/utils';
-import { CodeBlock, Pre } from './codeblock';
-import { useShiki } from '@/modules/shiki/client';
-import { HighlightOptionsCommon, HighlightOptionsThemes } from '@/modules/shiki';
+import { cn } from '@/lib/utils'
+import { HighlightOptionsCommon, HighlightOptionsThemes } from '@/modules/shiki'
+import { useShiki } from '@/modules/shiki/client'
+
+import { CodeBlock, Pre } from './codeblock'
 
 const components = {
   pre(props) {

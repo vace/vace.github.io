@@ -1,5 +1,6 @@
 import dayjs from 'dayjs'
 import matter from 'gray-matter'
+import path from 'path'
 
 import { getDirectoryFiles, putFileContent } from './fs'
 
@@ -9,6 +10,11 @@ const BlogOutputPath = './src/modules/blog/.posts.cache.json'
 
 export async function generatorPostCache() {
   const buildStartAt = Date.now()
+  const current = await import(path.resolve(process.cwd(), BlogOutputPath))
+  if (current && current.version && (buildStartAt - current.version) < 2000) {
+    return current
+  }
+
   const files = await getDirectoryFiles(BlogStoragePath, {
     recursive: true,
     extensions: ['.mdx', '.md'],

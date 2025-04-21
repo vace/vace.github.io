@@ -1,15 +1,16 @@
-import Slugger from 'github-slugger';
+import Slugger from 'github-slugger'
+import { remark } from 'remark'
+import remarkGfm from 'remark-gfm'
+import { visit } from 'unist-util-visit'
+
+import { flattenNode } from '../utils'
+
 import type { Root, Nodes } from 'mdast';
-import { remark } from 'remark';
-import remarkGfm from 'remark-gfm';
 import type { PluggableList, Transformer } from 'unified';
-import { visit } from 'unist-util-visit';
 import type {
   MdxJsxAttribute,
   MdxJsxExpressionAttribute,
 } from 'mdast-util-mdx-jsx';
-import { flattenNode } from '../utils';
-
 interface Heading {
   id: string;
   content: string;

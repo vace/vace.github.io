@@ -1,9 +1,9 @@
 "use client"
 
-import { MDXRemote } from "next-mdx-remote"
+import { MDXRemote } from 'next-mdx-remote'
 
-import { CompiledMdx } from "./mdx-compile";
-import { defaultMdxComponents } from "./components";
+import { defaultMdxComponents } from './components'
+import { CompiledMdx } from './mdx-compile'
 
 export type CustomMDXProps = {
   mdx: CompiledMdx

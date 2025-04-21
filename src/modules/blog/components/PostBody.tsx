@@ -1,8 +1,8 @@
-import { AnchorProvider } from "@/components/toc/primitive"
-import ClerkTOCItems from "@/components/toc/toc-clerk"
-import { TOCItemType } from "@/components/toc/types"
-import { CustomMDX } from "@/modules/mdx/custom-mdx"
-import { CompiledMdx } from "@/modules/mdx/mdx-compile"
+import { AnchorProvider } from '@/components/toc/primitive'
+import ClerkTOCItems from '@/components/toc/toc-clerk'
+import { TOCItemType } from '@/components/toc/types'
+import { CustomMDX } from '@/modules/mdx/custom-mdx'
+import { CompiledMdx } from '@/modules/mdx/mdx-compile'
 
 export type PostBodyProps = {
   mdx: CompiledMdx

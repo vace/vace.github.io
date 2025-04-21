@@ -1,9 +1,11 @@
-import { TOCItemType } from '@/components/toc/types';
-import Slugger from 'github-slugger';
-import { Heading, Root, RootContent } from 'mdast';
-import { Transformer } from 'unified';
-import { visit } from 'unist-util-visit';
-import { flattenNode } from '../utils';
+import Slugger from 'github-slugger'
+import { Heading, Root, RootContent } from 'mdast'
+import { Transformer } from 'unified'
+import { visit } from 'unist-util-visit'
+
+import { TOCItemType } from '@/components/toc/types'
+
+import { flattenNode } from '../utils'
 
 const slugger = new Slugger();
 

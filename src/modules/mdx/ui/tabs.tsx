@@ -1,7 +1,8 @@
 'use client';
-import { cn } from '@/lib/utils';
-import * as TabsPrimitive from '@radix-ui/react-tabs';
-import * as React from 'react';
+import * as React from 'react'
+
+import { cn } from '@/lib/utils'
+import * as TabsPrimitive from '@radix-ui/react-tabs'
 
 const Tabs = React.forwardRef<
   React.ComponentRef<typeof TabsPrimitive.Root>,

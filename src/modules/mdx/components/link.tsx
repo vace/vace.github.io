@@ -1,6 +1,6 @@
 'use client';
-import { type AnchorHTMLAttributes, forwardRef } from 'react';
-import NextLink from 'next/link';
+import NextLink from 'next/link'
+import { AnchorHTMLAttributes, forwardRef } from 'react'
 
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   /**

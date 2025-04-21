@@ -1,18 +1,12 @@
+import { Components, toJsxRuntime } from 'hast-util-to-jsx-runtime'
+import { Fragment, ReactNode } from 'react'
+import { jsx, jsxs } from 'react/jsx-runtime'
 import {
-  type BundledLanguage,
-  type CodeOptionsThemes,
-  type ShikiTransformer,
-  type CodeOptionsMeta,
-  type CodeToHastOptionsCommon,
-  type RegexEngine,
-  type Awaitable,
-  type Highlighter,
-  type BundledHighlighterOptions,
-} from 'shiki';
+  Awaitable, BundledHighlighterOptions, BundledLanguage, CodeOptionsMeta, CodeOptionsThemes, CodeToHastOptionsCommon,
+  Highlighter, RegexEngine, ShikiTransformer
+} from 'shiki'
+
 import type { BundledTheme } from 'shiki/themes';
-import { type Components, toJsxRuntime } from 'hast-util-to-jsx-runtime';
-import { Fragment, type ReactNode } from 'react';
-import { jsx, jsxs } from 'react/jsx-runtime';
 import type { Root } from 'hast';
 
 export function createStyleTransformer(): ShikiTransformer {

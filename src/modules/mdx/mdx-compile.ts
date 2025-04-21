@@ -1,9 +1,10 @@
-import { compile } from '@mdx-js/mdx'
 import remarkGfm from 'remark-gfm'
+import { VFile } from 'vfile'
+
+import { TOCItemType } from '@/components/toc/types'
+import { compile } from '@mdx-js/mdx'
 
 import { rehypeCode, rehypeToc, remarkCodeTab, remarkHeading, remarkImage } from './plugins'
-import { VFile } from 'vfile'
-import { TOCItemType } from '@/components/toc/types'
 import { remarkInstall } from './plugins/remark-install'
 
 type CompileOptions = {

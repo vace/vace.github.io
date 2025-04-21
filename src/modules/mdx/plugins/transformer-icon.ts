@@ -1,4 +1,4 @@
-import { type ShikiTransformer } from 'shiki';
+import { ShikiTransformer } from 'shiki'
 
 export interface CodeBlockIcon {
   viewBox: string;

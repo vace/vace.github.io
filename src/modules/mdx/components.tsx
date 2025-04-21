@@ -6,19 +6,21 @@ import type {
   TableHTMLAttributes,
 } from 'react';
 
-import NextImage, { ImageProps } from 'next/image';
-import { cn } from '@/lib/utils';
-import { CodeBlock, Pre } from './components/codeblock';
-import { Card, Cards } from './components/card';
-import Link from './components/link';
-import { Heading } from './components/heading';
-import { Callout } from './components/callout';
-import { TypeTable } from './components/type-table';
-import { Tab, Tabs } from './components/tabs';
-import { Accordion, Accordions } from './components/accordion';
-import { Banner } from './components/banner';
-import { ImageZoom } from './components/image-zoom';
-import { Step, Steps } from './components/steps';
+import NextImage, { ImageProps } from 'next/image'
+
+import { cn } from '@/lib/utils'
+
+import { Accordion, Accordions } from './components/accordion'
+import { Banner } from './components/banner'
+import { Callout } from './components/callout'
+import { Card, Cards } from './components/card'
+import { CodeBlock, Pre } from './components/codeblock'
+import { Heading } from './components/heading'
+import { ImageZoom } from './components/image-zoom'
+import Link from './components/link'
+import { Step, Steps } from './components/steps'
+import { Tab, Tabs } from './components/tabs'
+import { TypeTable } from './components/type-table'
 
 // function Image(
 //   props: ImageProps

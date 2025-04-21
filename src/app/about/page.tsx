@@ -1,14 +1,14 @@
+import clsx from 'clsx'
+import { MailIcon } from 'lucide-react'
 import { Metadata } from 'next'
+import Image from 'next/image'
+
+import { WebsiteProfile } from '@/common/config'
+import { getSkillImage, getSkillLevelText, Skill, skills } from '@/common/skills'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
 import { Progress } from '@/components/ui/progress'
-import Image from 'next/image'
-import { WebsiteProfile } from '@/common/config'
-import { MailIcon } from 'lucide-react'
-import GithubIcon from '@/components/icons/Github'
-import { skills, getSkillLevelText, getSkillImage, Skill } from '@/common/skills'
-import clsx from 'clsx'
+import { Separator } from '@/components/ui/separator'
 
 export const metadata: Metadata = {
   title: 'About Me',

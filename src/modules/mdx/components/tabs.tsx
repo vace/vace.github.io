@@ -4,18 +4,12 @@ import type {
   TabsContentProps,
   TabsProps as BaseProps,
 } from '@radix-ui/react-tabs';
-import {
-  useMemo,
-  useState,
-  createContext,
-  useContext,
-  useLayoutEffect,
-  useId,
-  useEffect,
-} from 'react';
-import * as Primitive from '../ui/tabs';
-import { useEffectEvent } from '@/hooks/use-effect-event';
-import { cn } from '@/lib/utils';
+import { createContext, useContext, useEffect, useId, useLayoutEffect, useMemo, useState } from 'react'
+
+import { useEffectEvent } from '@/hooks/use-effect-event'
+import { cn } from '@/lib/utils'
+
+import * as Primitive from '../ui/tabs'
 
 type ChangeListener = (v: string) => void;
 const listeners = new Map<string, ChangeListener[]>();

@@ -1,21 +1,18 @@
 'use client';
 
-import * as AccordionPrimitive from '@radix-ui/react-accordion';
+import { Check, ChevronRight, LinkIcon } from 'lucide-react'
+import { ComponentPropsWithoutRef, forwardRef, useEffect, useState } from 'react'
+
+import { useCopyButton } from '@/hooks/use-copy0button'
+import { cn } from '@/lib/utils'
+import * as AccordionPrimitive from '@radix-ui/react-accordion'
+
+import { buttonVariants } from '../ui/button'
+
 import type {
   AccordionMultipleProps,
   AccordionSingleProps,
 } from '@radix-ui/react-accordion';
-import { Check, ChevronRight, LinkIcon } from 'lucide-react';
-import {
-  forwardRef,
-  type ComponentPropsWithoutRef,
-  useState,
-  useEffect,
-} from 'react';
-import { buttonVariants } from '../ui/button';
-import { cn } from '@/lib/utils';
-import { useCopyButton } from '@/hooks/use-copy0button';
-
 export const Accordions = forwardRef<
   HTMLDivElement,
   | Omit<AccordionSingleProps, 'value' | 'onValueChange'>

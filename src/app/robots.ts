@@ -1,4 +1,4 @@
-import { WebsiteProfile } from "@/common/config";
+import { WebsiteProfile } from '@/common/config'
 
 export default function robots() {
   return {

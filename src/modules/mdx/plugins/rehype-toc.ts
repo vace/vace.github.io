@@ -1,9 +1,10 @@
 import type { Processor, Transformer } from 'unified';
 import type { Root, RootContent } from 'hast';
-import { toEstree } from 'hast-util-to-estree';
-import type { JSXElement } from 'estree-jsx';
-import { visit } from '../utils';
+import { toEstree } from 'hast-util-to-estree'
 
+import { visit } from '../utils'
+
+import type { JSXElement } from 'estree-jsx';
 // TODO
 type Declaration = any
 

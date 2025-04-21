@@ -1,6 +1,7 @@
 import type { HTMLAttributes, ReactNode } from 'react';
-import { cn } from '@/lib/utils';
-import Link from './link';
+import { cn } from '@/lib/utils'
+
+import Link from './link'
 
 export function Cards(props: HTMLAttributes<HTMLDivElement>) {
   return (

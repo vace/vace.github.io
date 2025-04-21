@@ -1,23 +1,14 @@
 'use client';
-import { Check, Copy } from 'lucide-react';
-import {
-  type ButtonHTMLAttributes,
-  forwardRef,
-  type HTMLAttributes,
-  type ReactNode,
-  useCallback,
-  useRef,
-} from 'react';
-import {
-  ScrollArea,
-  ScrollBar,
-  ScrollViewport,
-} from '@/components/ui/scroll-area';
-import { buttonVariants } from '../ui/button';
-import type { ScrollAreaViewportProps } from '@radix-ui/react-scroll-area';
-import { cn } from '@/lib/utils';
-import { useCopyButton } from '@/hooks/use-copy0button';
+import { Check, Copy } from 'lucide-react'
+import { ButtonHTMLAttributes, forwardRef, HTMLAttributes, ReactNode, useCallback, useRef } from 'react'
 
+import { ScrollArea, ScrollBar, ScrollViewport } from '@/components/ui/scroll-area'
+import { useCopyButton } from '@/hooks/use-copy0button'
+import { cn } from '@/lib/utils'
+
+import { buttonVariants } from '../ui/button'
+
+import type { ScrollAreaViewportProps } from '@radix-ui/react-scroll-area';
 export type CodeBlockProps = HTMLAttributes<HTMLElement> & {
   /**
    * Icon of code block

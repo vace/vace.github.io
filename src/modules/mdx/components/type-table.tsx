@@ -1,16 +1,14 @@
 'use client';
 
-import { InfoIcon } from 'lucide-react';
-import { cva } from 'class-variance-authority';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '../ui/popover';
-import type { ReactNode } from 'react';
-import Link from './link';
-import { cn } from '@/lib/utils';
+import { cva } from 'class-variance-authority'
+import { InfoIcon } from 'lucide-react'
 
+import { cn } from '@/lib/utils'
+
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover'
+import Link from './link'
+
+import type { ReactNode } from 'react';
 export function Info({ children }: { children: ReactNode }): ReactNode {
   return (
     <Popover>

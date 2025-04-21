@@ -1,10 +1,11 @@
 "use client"
 
-import Link from "next/link"
-import { motion } from "motion/react"
-import { usePathname } from "next/navigation"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, Home, Search, ArrowRight } from "lucide-react"
+import { ArrowRight, ChevronLeft, Home, Search } from 'lucide-react'
+import { motion } from 'motion/react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
+import { Button } from '@/components/ui/button'
 
 export default function NotFound() {
   const pathname = usePathname()

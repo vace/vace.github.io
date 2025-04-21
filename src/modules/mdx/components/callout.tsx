@@ -1,7 +1,8 @@
-import { AlertTriangle, CircleX, Info } from 'lucide-react';
-import { forwardRef, type HTMLAttributes, type ReactNode } from 'react';
-import { cva } from 'class-variance-authority';
-import { cn } from '@/lib/utils';
+import { cva } from 'class-variance-authority'
+import { AlertTriangle, CircleX, Info } from 'lucide-react'
+import { forwardRef, HTMLAttributes, ReactNode } from 'react'
+
+import { cn } from '@/lib/utils'
 
 type CalloutProps = Omit<
   HTMLAttributes<HTMLDivElement>,

@@ -1,5 +1,5 @@
-import * as React from "react"
-import { SVGProps, memo } from "react"
+import { memo, SVGProps } from 'react'
+
 const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props} viewBox="0 0 677.75 211.48">
     <path fill="none" d="M0 .05h176.44v210.93H0z" />

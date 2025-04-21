@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
-import { motion, useMotionValue, useSpring, useTransform, animate } from "motion/react";
-import { cn } from "@/lib/utils";
+import { motion, useSpring } from 'motion/react'
+import React, { useEffect } from 'react'
+
+import { cn } from '@/lib/utils'
 
 interface PinContainerProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;

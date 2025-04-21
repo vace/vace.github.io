@@ -1,14 +1,12 @@
 'use client';
 
-import { cva } from 'class-variance-authority';
-import { FileIcon, FolderIcon, FolderOpen } from 'lucide-react';
-import { useState, type HTMLAttributes, type ReactNode } from 'react';
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from '../ui/collapsible';
-import { cn } from '@/lib/utils';
+import { cva } from 'class-variance-authority'
+import { FileIcon, FolderIcon, FolderOpen } from 'lucide-react'
+import { HTMLAttributes, ReactNode, useState } from 'react'
+
+import { cn } from '@/lib/utils'
+
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '../ui/collapsible'
 
 const itemVariants = cva(
   'flex flex-row items-center gap-2 rounded-md px-2 py-1.5 text-sm hover:bg-accent hover:text-accent-foreground [&_svg]:size-4',

@@ -8,11 +8,12 @@ import type { AnchorHTMLAttributes, ReactNode, RefObject } from 'react'
 import { createContext, forwardRef, useContext, useMemo, useRef } from 'react'
 import scrollIntoView from 'scroll-into-view-if-needed'
 
-import { TableOfContents } from './types';
-import { mergeRefs } from '@/lib/utils';
-import { useOnChange } from '@/hooks/use-on-change';
-import { useAnchorObserver } from '@/hooks/use-anchor-observer';
-import { MaxTocDepth } from '@/common/config';
+import { MaxTocDepth } from '@/common/config'
+import { useAnchorObserver } from '@/hooks/use-anchor-observer'
+import { useOnChange } from '@/hooks/use-on-change'
+import { mergeRefs } from '@/lib/utils'
+
+import { TableOfContents } from './types'
 
 const ActiveAnchorContext = createContext<string[]>([])
 

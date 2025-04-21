@@ -1,9 +1,11 @@
 'use client'
-import { cn } from '@/lib/utils'
 import { useTheme } from 'next-themes'
-import { type HTMLAttributes, useLayoutEffect, useState } from 'react'
-import Sun from '../icons/Sun'
+import { HTMLAttributes, useLayoutEffect, useState } from 'react'
+
+import { cn } from '@/lib/utils'
+
 import MoonIcon from '../icons/Moon'
+import Sun from '../icons/Sun'
 import SunMoon from '../icons/SunMoon'
 
 const full = [

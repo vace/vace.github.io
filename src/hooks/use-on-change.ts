@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 function isDifferent(a: unknown, b: unknown): boolean {
   if (Array.isArray(a) && Array.isArray(b)) {

@@ -1,6 +1,7 @@
-import { cn } from '@/lib/utils';
-import { Star } from 'lucide-react';
-import { type AnchorHTMLAttributes } from 'react';
+import { Star } from 'lucide-react'
+import { AnchorHTMLAttributes } from 'react'
+
+import { cn } from '@/lib/utils'
 
 async function getRepoStarsAndForks(
   owner: string,

@@ -1,6 +1,6 @@
 import type { Transformer } from 'unified';
 import type { Code, Root, RootContent } from 'mdast';
-import { visit } from 'unist-util-visit';
+import { visit } from 'unist-util-visit'
 
 const TabRegex = /tab="(.+?)"/;
 

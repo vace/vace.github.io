@@ -1,5 +1,5 @@
-import { CustomMDX } from "./custom-mdx"
-import { mdxCompile } from "./mdx-compile"
+import { CustomMDX } from './custom-mdx'
+import { mdxCompile } from './mdx-compile'
 
 export type MarkdownPreviewProps = {
   content: string

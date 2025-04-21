@@ -1,5 +1,7 @@
-import { cn } from '@/lib/utils';
-import { Link } from 'lucide-react';
+import { Link } from 'lucide-react'
+
+import { cn } from '@/lib/utils'
+
 import type { ComponentPropsWithoutRef } from 'react';
 
 type Types = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

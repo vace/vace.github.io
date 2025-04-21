@@ -1,5 +1,5 @@
-import { WebsiteProfile } from "@/common/config"
-import { getAllPostList } from "@/modules/blog/model"
+import { WebsiteProfile } from '@/common/config'
+import { getAllPostList } from '@/modules/blog/model'
 
 export async function GET() {
   const { blogs } = await getAllPostList()

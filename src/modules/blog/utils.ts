@@ -1,5 +1,6 @@
-import { WebsiteProfile } from "@/common/config"
-import { BlogPost } from "./types"
+import { WebsiteProfile } from '@/common/config'
+
+import { BlogPost } from './types'
 
 export function generatePostUrl(slug: string) {
   return `/blog/${slug}`

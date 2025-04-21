@@ -1,25 +1,17 @@
 import type { Root } from 'hast';
 import type { RehypeShikiOptions } from '@shikijs/rehype';
-import rehypeShikiFromHighlighter from '@shikijs/rehype/core';
-import {
-  transformerNotationDiff,
-  transformerNotationHighlight,
-  transformerNotationWordHighlight,
-} from '@shikijs/transformers';
-import type { Processor, Transformer } from 'unified';
-import {
-  type BuiltinTheme,
-  bundledLanguages,
-  type ShikiTransformer,
-} from 'shiki';
-import type { MdxJsxFlowElement } from 'mdast-util-mdx-jsx';
-import { CodeBlockIcon, IconOptions, transformerIcon } from './transformer-icon';
-import {
-  createStyleTransformer,
-  defaultThemes,
-  getHighlighter,
-} from '@/modules/shiki/shiki';
+import { BuiltinTheme, bundledLanguages, ShikiTransformer } from 'shiki'
 
+import { createStyleTransformer, defaultThemes, getHighlighter } from '@/modules/shiki/shiki'
+import rehypeShikiFromHighlighter from '@shikijs/rehype/core'
+import {
+  transformerNotationDiff, transformerNotationHighlight, transformerNotationWordHighlight
+} from '@shikijs/transformers'
+
+import { CodeBlockIcon, IconOptions, transformerIcon } from './transformer-icon'
+
+import type { Processor, Transformer } from 'unified';
+import type { MdxJsxFlowElement } from 'mdast-util-mdx-jsx';
 interface MetaValue {
   name: string;
   regex: RegExp;

@@ -1,9 +1,11 @@
 "use client"
 
-import { CSSProperties, useEffect, useRef, useState } from "react";
-import { PointerTracking } from "./pointer-tracking";
-import { usePathname } from "next/navigation";
-import { getBackgroundElementList } from "@/lib/utils";
+import { usePathname } from 'next/navigation'
+import { CSSProperties, useEffect, useRef, useState } from 'react'
+
+import { getBackgroundElementList } from '@/lib/utils'
+
+import { PointerTracking } from './pointer-tracking'
 
 // 波浪背景效果
 export const WaveBackground = ({ elements }: { elements: CSSProperties[] }) => {
