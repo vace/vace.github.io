@@ -138,7 +138,7 @@ export const skills: SkillCategory[] = [
         name: "API设计 / Linux / Nginx / 云服务",
         level: "familiar",
         percentage: 70,
-        description: "设计可扩展的RESTful API，熟悉使用AWS, AliYun平台部署和管理应用",
+        description: "可设计可扩展的RESTful API，熟悉使用AWS, AliYun平台部署和管理应用",
         icon: {
           name: "Linux",
           color: "FCC624",
@@ -176,7 +176,7 @@ export const skills: SkillCategory[] = [
         name: "Shell / 测试",
         level: "proficient",
         percentage: 80,
-        description: "编写单元测试、集成测试和E2E测试，使用Jest, React Testing Library等",
+        description: "编写单元测试、集成测试和E2E测试，使用Jest, Vitest Library等",
         icon: {
           name: "Jest",
           color: "C21325",
