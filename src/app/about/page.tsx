@@ -57,6 +57,11 @@ export default async function AboutPage() {
               <img src="https://img.shields.io/badge/Electron-282C34?logo=electron&logoColor=47848F" alt="Electron" title="Electron" height="25" />
               <img src="https://img.shields.io/badge/Node.js-282C34?logo=node.js&logoColor=339933" alt="Node.js" title="Node.js" height="25" />
               <img src="https://img.shields.io/badge/PHP-282C34?logo=php&logoColor=777BB4" alt="PHP" title="PHP" height="25" />
+              <img src="https://img.shields.io/badge/MySQL-282C34?logo=mysql&logoColor=4479A1" alt="MySQL" title="MySQL" height="25" />
+              <img src="https://img.shields.io/badge/Docker-282C34?logo=docker&logoColor=2496ED" alt="Docker" title="Docker" height="25" />
+              <img src="https://img.shields.io/badge/Git-282C34?logo=git&logoColor=F05032" alt="Git" title="Git" height="25" />
+              <img src="https://img.shields.io/badge/Android-282C34?logo=android&logoColor=3DDC84" alt="Android" title="Android" height="25" />
+              <img src="https://img.shields.io/badge/Spring-282C34?logo=springboot&logoColor=6DB33F" alt="Spring Boot" title="Spring Boot" height="25" />
             </div>
           </div>
         </div>
