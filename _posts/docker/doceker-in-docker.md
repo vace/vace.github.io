@@ -311,6 +311,162 @@ try {
 }
 ```
 
+### 场景四：后台执行任务管理（含日志、状态查询、停止等）
+
+对于复杂任务，我们希望有一个服务来管理这些 Docker 任务，支持启动、停止、查询状态和日志等功能：
+
+```typescript title="docker-service.ts"
+import { spawn, ChildProcess } from 'node:child_process';
+import { v4 as uuidv4 } from 'uuid';
+
+export interface DockerTask {
+  id: string;
+  command: string;
+  args: string[];
+  status: 'running' | 'completed' | 'failed';
+  startTime: number;
+  endTime?: number;
+  logs: string[];
+  process?: ChildProcess;
+  exitCode?: number | null;
+}
+
+export class DockerService {
+  private tasks: Map<string, DockerTask> = new Map();
+
+  /**
+   * 运行一个新的 Docker 任务
+   * @param command Docker 命令 (e.g., 'run')
+   * @param args 参数列表
+   * @param options spawn 选项
+   * @returns 任务 ID
+   */
+  public runTask(command: string, args: string[], options: any = {}): string {
+    const taskId = uuidv4();
+
+    const task: DockerTask = {
+      id: taskId,
+      command,
+      args,
+      status: 'running',
+      startTime: Date.now(),
+      logs: []
+    };
+
+    const runProcess = spawn('docker', [command, ...args], {
+      ...options,
+      detached: true
+    });
+
+    task.process = runProcess;
+
+    // 收集日志
+    if (runProcess.stdout) {
+      runProcess.stdout.on('data', (data) => {
+        const log = data.toString();
+        task.logs.push(log);
+      });
+    }
+
+    if (runProcess.stderr) {
+      runProcess.stderr.on('data', (data) => {
+        const log = data.toString();
+        task.logs.push(log);
+      });
+    }
+
+    // 监听结束
+    runProcess.on('close', (code) => {
+      task.status = code === 0 ? 'completed' : 'failed';
+      task.endTime = Date.now();
+      task.exitCode = code;
+      task.process = undefined; // 清理 process 引用
+    });
+
+    runProcess.on('error', (err) => {
+      task.status = 'failed';
+      task.logs.push(`Process error: ${err.message}`);
+      task.endTime = Date.now();
+      task.process = undefined;
+    });
+
+    // 让进程在后台运行
+    runProcess.unref();
+
+    this.tasks.set(taskId, task);
+    return taskId;
+  }
+
+  /**
+   * 停止任务
+   * @param taskId 任务 ID
+   */
+  public stopTask(taskId: string): boolean {
+    const task = this.tasks.get(taskId);
+    if (task && task.process && task.status === 'running') {
+      try {
+        if (task.process.pid) {
+          process.kill(-task.process.pid); // 尝试 kill 进程组
+        } else {
+          task.process.kill();
+        }
+        task.status = 'failed'; // 被强行停止视为 failed 或者可以加个 stopped 状态
+        task.logs.push('Task stopped by user.');
+        return true;
+      } catch (e) {
+        console.error(`Failed to stop task ${taskId}:`, e);
+        return false;
+      }
+    }
+    return false;
+  }
+
+  /**
+   * 获取任务日志
+   * @param taskId 任务 ID
+   */
+  public getTaskLogs(taskId: string): string {
+    const task = this.tasks.get(taskId);
+    return task ? task.logs.join('') : '';
+  }
+
+  /**
+   * 获取任务状态
+   * @param taskId 任务 ID
+   */
+  public getTaskStatus(taskId: string): DockerTask | null {
+    const task = this.tasks.get(taskId);
+    if (!task) return null;
+
+    // 返回不带 process 对象的副本，避免循环引用等问题
+    const { process, ...taskInfo } = task;
+    return taskInfo as DockerTask;
+  }
+
+  /**
+   * 删除任务
+   */
+  public deleteTask(taskId: string): boolean {
+    this.tasks.delete(taskId);
+    return true;
+  }
+}
+
+export const dockerService = new DockerService();
+
+// 使用示例
+const taskId = dockerService.runTask('run', ['--rm', 'alpine', 'echo', 'Hello, Docker in Docker!']);
+console.log(`Started Docker task with ID: ${taskId}`);
+
+setTimeout(() => {
+  const status = dockerService.getTaskStatus(taskId);
+  const logs = dockerService.getTaskLogs(taskId);
+  console.log(`Task Status: ${JSON.stringify(status, null, 2)}`);
+  console.log(`Task Logs:\n${logs}`);
+}, 3000);
+
+```
+
 ## 为什么要用"构建镜像"来执行临时任务？
 
 <Cards>
