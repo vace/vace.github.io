@@ -24,7 +24,7 @@ export const imageFormat = (url: string, w?: number, q = 90, h?: number) => {
     return url
   }
 
-  if (url.endsWith('.webp')) {
+  if (url.endsWith('.webp') || url.endsWith('.svg')) {
     return url
   }
 
